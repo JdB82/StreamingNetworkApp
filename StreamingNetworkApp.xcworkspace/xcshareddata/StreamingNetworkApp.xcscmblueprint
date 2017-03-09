@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8682B9D5389B2B7118C51DE1498CDC43B4812B19",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8682B9D5389B2B7118C51DE1498CDC43B4812B19" : 9223372036854775807,
+    "75E2B2385105F5412F7E761FC0A1ADD4FA0C5ABA" : 9223372036854775807,
+    "6EFA5EA260A1344DB8B5F1B1186CC432C8F08A1C" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8280D5C4-D8DF-4E72-A969-58E6B7D79E08",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8682B9D5389B2B7118C51DE1498CDC43B4812B19" : "StreamingNetworkApp\/",
+    "75E2B2385105F5412F7E761FC0A1ADD4FA0C5ABA" : "StreamingNetworkApp\/TAA-Assignments\/",
+    "6EFA5EA260A1344DB8B5F1B1186CC432C8F08A1C" : "StreamingNetworkApp\/TAA-Playground\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "StreamingNetworkApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "StreamingNetworkApp.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JdB82\/TAA-Playground.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6EFA5EA260A1344DB8B5F1B1186CC432C8F08A1C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:JdB82\/TAA-Assignments.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "75E2B2385105F5412F7E761FC0A1ADD4FA0C5ABA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AppAcademyNL\/247Streaming.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8682B9D5389B2B7118C51DE1498CDC43B4812B19"
+    }
+  ]
+}

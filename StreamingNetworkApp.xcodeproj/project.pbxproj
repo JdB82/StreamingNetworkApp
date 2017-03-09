@@ -17,6 +17,10 @@
 		600FE6BA1E705D41005D208B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 600FE6B91E705D41005D208B /* Assets.xcassets */; };
 		600FE6BD1E705D41005D208B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 600FE6BB1E705D41005D208B /* LaunchScreen.storyboard */; };
 		600FE6E11E705D7C005D208B /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600FE6E01E705D7C005D208B /* MyCollectionViewCell.swift */; };
+		6040079D1E71AAAE00B8035C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 604007981E71AAAE00B8035C /* Info.plist */; };
+		6040079F1E71AAAE00B8035C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6040079B1E71AAAE00B8035C /* Info.plist */; };
+		604007A11E71ABB200B8035C /* StreamingNetworkAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6040079C1E71AAAE00B8035C /* StreamingNetworkAppUITests.swift */; };
+		604007A21E71ABB500B8035C /* StreamingNetworkAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604007991E71AAAE00B8035C /* StreamingNetworkAppTests.swift */; };
 		B920B207F0B53C89A4DEE37A /* Pods_StreamingNetworkAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C761EF9BC797F220ECE91F /* Pods_StreamingNetworkAppTests.framework */; };
 		ED47A3521781D12A5EE7573D /* Pods_StreamingNetworkAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB34C77DB74464BA35896C5 /* Pods_StreamingNetworkAppUITests.framework */; };
 		F87F3C5430182AB1188EB6B3 /* Pods_StreamingNetworkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41944E92FFF745E02BE8F04D /* Pods_StreamingNetworkApp.framework */; };
@@ -57,6 +61,10 @@
 		600FE6C31E705D41005D208B /* StreamingNetworkAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreamingNetworkAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		600FE6CE1E705D41005D208B /* StreamingNetworkAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreamingNetworkAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		600FE6E01E705D7C005D208B /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		604007981E71AAAE00B8035C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		604007991E71AAAE00B8035C /* StreamingNetworkAppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingNetworkAppTests.swift; sourceTree = "<group>"; };
+		6040079B1E71AAAE00B8035C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6040079C1E71AAAE00B8035C /* StreamingNetworkAppUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingNetworkAppUITests.swift; sourceTree = "<group>"; };
 		61C761EF9BC797F220ECE91F /* Pods_StreamingNetworkAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamingNetworkAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7101C741468EB827F9C6F777 /* Pods-StreamingNetworkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkApp/Pods-StreamingNetworkApp.release.xcconfig"; sourceTree = "<group>"; };
 		AE22B7DD591C07F773AD9C91 /* Pods-StreamingNetworkAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkAppTests/Pods-StreamingNetworkAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				600FE6B11E705D41005D208B /* StreamingNetworkApp */,
+				604007971E71AAAE00B8035C /* StreamingNetworkAppTests */,
+				6040079A1E71AAAE00B8035C /* StreamingNetworkAppUITests */,
 				600FE6B01E705D41005D208B /* Products */,
 				600370201E7164710095CE53 /* App images  */,
 				BA18353F3BE5732C6C10EA9E /* Pods */,
@@ -155,6 +165,24 @@
 				600FE6B91E705D41005D208B /* Assets.xcassets */,
 			);
 			path = StreamingNetworkApp;
+			sourceTree = "<group>";
+		};
+		604007971E71AAAE00B8035C /* StreamingNetworkAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				604007981E71AAAE00B8035C /* Info.plist */,
+				604007991E71AAAE00B8035C /* StreamingNetworkAppTests.swift */,
+			);
+			path = StreamingNetworkAppTests;
+			sourceTree = "<group>";
+		};
+		6040079A1E71AAAE00B8035C /* StreamingNetworkAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6040079B1E71AAAE00B8035C /* Info.plist */,
+				6040079C1E71AAAE00B8035C /* StreamingNetworkAppUITests.swift */,
+			);
+			path = StreamingNetworkAppUITests;
 			sourceTree = "<group>";
 		};
 		78940BD408CBE231D01520DA /* Frameworks */ = {
@@ -301,7 +329,9 @@
 			files = (
 				600FE6BD1E705D41005D208B /* LaunchScreen.storyboard in Resources */,
 				6003703A1E719BBA0095CE53 /* GoogleService-Info-2.plist in Resources */,
+				6040079F1E71AAAE00B8035C /* Info.plist in Resources */,
 				600FE6BA1E705D41005D208B /* Assets.xcassets in Resources */,
+				6040079D1E71AAAE00B8035C /* Info.plist in Resources */,
 				600FE6B81E705D41005D208B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604007A11E71ABB200B8035C /* StreamingNetworkAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604007A21E71ABB500B8035C /* StreamingNetworkAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
