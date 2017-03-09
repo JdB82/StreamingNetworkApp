@@ -8,7 +8,7 @@
 
 import UIKit
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
+
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
     var items = ["247Jazz", "247Blitz", "247Spice", "247Ultra", "247Event", "Q-Dance", "247The Beat", "Downstation Buddha"]
     

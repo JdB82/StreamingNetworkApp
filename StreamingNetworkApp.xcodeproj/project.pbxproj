@@ -10,14 +10,16 @@
 		600370231E71663B0095CE53 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600370221E71663B0095CE53 /* DetailViewController.swift */; };
 		6003702D1E716AA60095CE53 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6003702C1E716AA60095CE53 /* SettingsViewController.swift */; };
 		6003702F1E716AE60095CE53 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6003702E1E716AE60095CE53 /* InformationViewController.swift */; };
+		6003703A1E719BBA0095CE53 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 600370391E719BBA0095CE53 /* GoogleService-Info-2.plist */; };
 		600FE6B31E705D41005D208B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600FE6B21E705D41005D208B /* AppDelegate.swift */; };
 		600FE6B51E705D41005D208B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600FE6B41E705D41005D208B /* ViewController.swift */; };
 		600FE6B81E705D41005D208B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 600FE6B61E705D41005D208B /* Main.storyboard */; };
 		600FE6BA1E705D41005D208B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 600FE6B91E705D41005D208B /* Assets.xcassets */; };
 		600FE6BD1E705D41005D208B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 600FE6BB1E705D41005D208B /* LaunchScreen.storyboard */; };
-		600FE6C81E705D41005D208B /* StreamingNetworkAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600FE6C71E705D41005D208B /* StreamingNetworkAppTests.swift */; };
-		600FE6D31E705D41005D208B /* StreamingNetworkAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600FE6D21E705D41005D208B /* StreamingNetworkAppUITests.swift */; };
 		600FE6E11E705D7C005D208B /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600FE6E01E705D7C005D208B /* MyCollectionViewCell.swift */; };
+		B920B207F0B53C89A4DEE37A /* Pods_StreamingNetworkAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C761EF9BC797F220ECE91F /* Pods_StreamingNetworkAppTests.framework */; };
+		ED47A3521781D12A5EE7573D /* Pods_StreamingNetworkAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB34C77DB74464BA35896C5 /* Pods_StreamingNetworkAppUITests.framework */; };
+		F87F3C5430182AB1188EB6B3 /* Pods_StreamingNetworkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41944E92FFF745E02BE8F04D /* Pods_StreamingNetworkApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B389178D7FB2C98C40F31F2 /* Pods-StreamingNetworkAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkAppTests/Pods-StreamingNetworkAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		41944E92FFF745E02BE8F04D /* Pods_StreamingNetworkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamingNetworkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52C124749A7DD198C1A89761 /* Pods-StreamingNetworkAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkAppUITests/Pods-StreamingNetworkAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		600370221E71663B0095CE53 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
 		6003702C1E716AA60095CE53 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../SettingsViewController.swift; sourceTree = "<group>"; };
 		6003702E1E716AE60095CE53 /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InformationViewController.swift; path = ../InformationViewController.swift; sourceTree = "<group>"; };
+		600370391E719BBA0095CE53 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		600FE6AF1E705D41005D208B /* StreamingNetworkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamingNetworkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		600FE6B21E705D41005D208B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		600FE6B41E705D41005D208B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,12 +55,14 @@
 		600FE6BC1E705D41005D208B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		600FE6BE1E705D41005D208B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		600FE6C31E705D41005D208B /* StreamingNetworkAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreamingNetworkAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		600FE6C71E705D41005D208B /* StreamingNetworkAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingNetworkAppTests.swift; sourceTree = "<group>"; };
-		600FE6C91E705D41005D208B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		600FE6CE1E705D41005D208B /* StreamingNetworkAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreamingNetworkAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		600FE6D21E705D41005D208B /* StreamingNetworkAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingNetworkAppUITests.swift; sourceTree = "<group>"; };
-		600FE6D41E705D41005D208B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		600FE6E01E705D7C005D208B /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		61C761EF9BC797F220ECE91F /* Pods_StreamingNetworkAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamingNetworkAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7101C741468EB827F9C6F777 /* Pods-StreamingNetworkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkApp/Pods-StreamingNetworkApp.release.xcconfig"; sourceTree = "<group>"; };
+		AE22B7DD591C07F773AD9C91 /* Pods-StreamingNetworkAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkAppTests/Pods-StreamingNetworkAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AEB34C77DB74464BA35896C5 /* Pods_StreamingNetworkAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamingNetworkAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFDFD456B3DA4C41EE902D62 /* Pods-StreamingNetworkAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkAppUITests/Pods-StreamingNetworkAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FCB17092CC3533C01EEBA5CC /* Pods-StreamingNetworkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkApp/Pods-StreamingNetworkApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F87F3C5430182AB1188EB6B3 /* Pods_StreamingNetworkApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B920B207F0B53C89A4DEE37A /* Pods_StreamingNetworkAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED47A3521781D12A5EE7573D /* Pods_StreamingNetworkAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,10 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				600FE6B11E705D41005D208B /* StreamingNetworkApp */,
-				600FE6C61E705D41005D208B /* StreamingNetworkAppTests */,
-				600FE6D11E705D41005D208B /* StreamingNetworkAppUITests */,
 				600FE6B01E705D41005D208B /* Products */,
 				600370201E7164710095CE53 /* App images  */,
+				BA18353F3BE5732C6C10EA9E /* Pods */,
+				78940BD408CBE231D01520DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +149,7 @@
 				6003702C1E716AA60095CE53 /* SettingsViewController.swift */,
 				6003702E1E716AE60095CE53 /* InformationViewController.swift */,
 				600FE6BE1E705D41005D208B /* Info.plist */,
+				600370391E719BBA0095CE53 /* GoogleService-Info-2.plist */,
 				6003701F1E7164330095CE53 /* Storyboards */,
 				600370211E7164960095CE53 /* LaunchScreen */,
 				600FE6B91E705D41005D208B /* Assets.xcassets */,
@@ -145,22 +157,27 @@
 			path = StreamingNetworkApp;
 			sourceTree = "<group>";
 		};
-		600FE6C61E705D41005D208B /* StreamingNetworkAppTests */ = {
+		78940BD408CBE231D01520DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				600FE6C71E705D41005D208B /* StreamingNetworkAppTests.swift */,
-				600FE6C91E705D41005D208B /* Info.plist */,
+				41944E92FFF745E02BE8F04D /* Pods_StreamingNetworkApp.framework */,
+				61C761EF9BC797F220ECE91F /* Pods_StreamingNetworkAppTests.framework */,
+				AEB34C77DB74464BA35896C5 /* Pods_StreamingNetworkAppUITests.framework */,
 			);
-			path = StreamingNetworkAppTests;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		600FE6D11E705D41005D208B /* StreamingNetworkAppUITests */ = {
+		BA18353F3BE5732C6C10EA9E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				600FE6D21E705D41005D208B /* StreamingNetworkAppUITests.swift */,
-				600FE6D41E705D41005D208B /* Info.plist */,
+				FCB17092CC3533C01EEBA5CC /* Pods-StreamingNetworkApp.debug.xcconfig */,
+				7101C741468EB827F9C6F777 /* Pods-StreamingNetworkApp.release.xcconfig */,
+				AE22B7DD591C07F773AD9C91 /* Pods-StreamingNetworkAppTests.debug.xcconfig */,
+				1B389178D7FB2C98C40F31F2 /* Pods-StreamingNetworkAppTests.release.xcconfig */,
+				BFDFD456B3DA4C41EE902D62 /* Pods-StreamingNetworkAppUITests.debug.xcconfig */,
+				52C124749A7DD198C1A89761 /* Pods-StreamingNetworkAppUITests.release.xcconfig */,
 			);
-			path = StreamingNetworkAppUITests;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 600FE6D71E705D41005D208B /* Build configuration list for PBXNativeTarget "StreamingNetworkApp" */;
 			buildPhases = (
+				61C6ABE0ACAE36C02D594377 /* [CP] Check Pods Manifest.lock */,
 				600FE6AB1E705D41005D208B /* Sources */,
 				600FE6AC1E705D41005D208B /* Frameworks */,
 				600FE6AD1E705D41005D208B /* Resources */,
+				527395A77AE963BC9F12D21F /* [CP] Embed Pods Frameworks */,
+				392F61FD8EB00860BEF9DE2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 600FE6DA1E705D41005D208B /* Build configuration list for PBXNativeTarget "StreamingNetworkAppTests" */;
 			buildPhases = (
+				C8D0DC52484DC6D0B39D9E9B /* [CP] Check Pods Manifest.lock */,
 				600FE6BF1E705D41005D208B /* Sources */,
 				600FE6C01E705D41005D208B /* Frameworks */,
 				600FE6C11E705D41005D208B /* Resources */,
+				9E3BD036ADE0E536F02AD7FC /* [CP] Embed Pods Frameworks */,
+				2C19A280B537334A78F9CF2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 600FE6DD1E705D41005D208B /* Build configuration list for PBXNativeTarget "StreamingNetworkAppUITests" */;
 			buildPhases = (
+				7740BCD8AA49EB3355F23690 /* [CP] Check Pods Manifest.lock */,
 				600FE6CA1E705D41005D208B /* Sources */,
 				600FE6CB1E705D41005D208B /* Frameworks */,
 				600FE6CC1E705D41005D208B /* Resources */,
+				229BA602D53B80911D74451B /* [CP] Embed Pods Frameworks */,
+				E3FC0D7B427744DEC87895D0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -274,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				600FE6BD1E705D41005D208B /* LaunchScreen.storyboard in Resources */,
+				6003703A1E719BBA0095CE53 /* GoogleService-Info-2.plist in Resources */,
 				600FE6BA1E705D41005D208B /* Assets.xcassets in Resources */,
 				600FE6B81E705D41005D208B /* Main.storyboard in Resources */,
 			);
@@ -295,6 +322,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		229BA602D53B80911D74451B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamingNetworkAppUITests/Pods-StreamingNetworkAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C19A280B537334A78F9CF2E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamingNetworkAppTests/Pods-StreamingNetworkAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		392F61FD8EB00860BEF9DE2E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamingNetworkApp/Pods-StreamingNetworkApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		527395A77AE963BC9F12D21F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamingNetworkApp/Pods-StreamingNetworkApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61C6ABE0ACAE36C02D594377 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7740BCD8AA49EB3355F23690 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9E3BD036ADE0E536F02AD7FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamingNetworkAppTests/Pods-StreamingNetworkAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8D0DC52484DC6D0B39D9E9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E3FC0D7B427744DEC87895D0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamingNetworkAppUITests/Pods-StreamingNetworkAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		600FE6AB1E705D41005D208B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -313,7 +478,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				600FE6C81E705D41005D208B /* StreamingNetworkAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +485,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				600FE6D31E705D41005D208B /* StreamingNetworkAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +620,7 @@
 		};
 		600FE6D81E705D41005D208B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCB17092CC3533C01EEBA5CC /* Pods-StreamingNetworkApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6CB7HT7995;
@@ -470,6 +634,7 @@
 		};
 		600FE6D91E705D41005D208B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7101C741468EB827F9C6F777 /* Pods-StreamingNetworkApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6CB7HT7995;
@@ -483,6 +648,7 @@
 		};
 		600FE6DB1E705D41005D208B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE22B7DD591C07F773AD9C91 /* Pods-StreamingNetworkAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -498,6 +664,7 @@
 		};
 		600FE6DC1E705D41005D208B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B389178D7FB2C98C40F31F2 /* Pods-StreamingNetworkAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -513,6 +680,7 @@
 		};
 		600FE6DE1E705D41005D208B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFDFD456B3DA4C41EE902D62 /* Pods-StreamingNetworkAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6CB7HT7995;
@@ -527,6 +695,7 @@
 		};
 		600FE6DF1E705D41005D208B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52C124749A7DD198C1A89761 /* Pods-StreamingNetworkAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6CB7HT7995;

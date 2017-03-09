@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eHG-eF-NQg">
-                                <rect key="frame" x="0.0" y="133" width="375" height="430"/>
+                                <rect key="frame" x="0.0" y="133" width="375" height="418"/>
                                 <color key="backgroundColor" red="0.9882352941176471" green="0.76078431372549016" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.41659311030000001" green="0.72955985239999999" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EOF-cS-D3J">
@@ -46,17 +46,20 @@
                                                     <color key="textColor" red="0.9882352941176471" green="0.76078431372549016" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-247spice" translatesAutoresizingMaskIntoConstraints="NO" id="6jX-1c-kWy">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-247spice" translatesAutoresizingMaskIntoConstraints="NO" id="6jX-1c-kWy">
                                                     <rect key="frame" x="0.0" y="0.0" width="195" height="195"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="6jX-1c-kWy" firstAttribute="top" secondItem="8cN-9l-ecz" secondAttribute="top" id="Mzf-qF-OpK"/>
+                                            <constraint firstAttribute="bottom" secondItem="6jX-1c-kWy" secondAttribute="bottom" id="Vxp-0W-fpu"/>
                                             <constraint firstItem="gip-su-sdk" firstAttribute="top" secondItem="8cN-9l-ecz" secondAttribute="topMargin" constant="17" id="aK2-dA-9dr"/>
                                             <constraint firstItem="gip-su-sdk" firstAttribute="leading" secondItem="8cN-9l-ecz" secondAttribute="leadingMargin" id="etd-1z-qB9"/>
+                                            <constraint firstItem="6jX-1c-kWy" firstAttribute="leading" secondItem="8cN-9l-ecz" secondAttribute="leading" id="kbX-1T-pl6"/>
                                             <constraint firstItem="gip-su-sdk" firstAttribute="trailing" secondItem="8cN-9l-ecz" secondAttribute="trailingMargin" id="mSy-zO-b37"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="gip-su-sdk" secondAttribute="bottom" constant="34" id="o0m-k1-Uct"/>
+                                            <constraint firstItem="6jX-1c-kWy" firstAttribute="centerX" secondItem="gip-su-sdk" secondAttribute="centerX" id="xT1-kB-bU9"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="myLabel" destination="gip-su-sdk" id="f87-9f-hj5"/>
@@ -73,16 +76,25 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="69"/>
                                 <color key="backgroundColor" red="0.81960784313725488" green="0.85882352941176465" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Bol.comBanner.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="UKi-8K-iEU">
+                                <rect key="frame" x="0.0" y="552" width="375" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="56G-n5-zF1"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="UKi-8K-iEU" firstAttribute="leading" secondItem="eHG-eF-NQg" secondAttribute="leading" id="3Zo-Jj-YS0"/>
                             <constraint firstAttribute="trailing" secondItem="occ-Tq-1XJ" secondAttribute="trailing" id="6cl-LJ-SNi"/>
-                            <constraint firstItem="eHG-eF-NQg" firstAttribute="top" secondItem="occ-Tq-1XJ" secondAttribute="bottom" id="8gc-yT-2Pe"/>
-                            <constraint firstAttribute="trailing" secondItem="eHG-eF-NQg" secondAttribute="trailing" id="J3S-a9-0Lj"/>
-                            <constraint firstItem="eHG-eF-NQg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bRc-mx-kWC"/>
+                            <constraint firstItem="eHG-eF-NQg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EOW-BK-iuz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UKi-8K-iEU" secondAttribute="bottom" constant="8" symbolic="YES" id="Hxu-f3-p4O"/>
+                            <constraint firstAttribute="trailing" secondItem="eHG-eF-NQg" secondAttribute="trailing" id="RDb-v3-Pf0"/>
+                            <constraint firstItem="eHG-eF-NQg" firstAttribute="top" secondItem="occ-Tq-1XJ" secondAttribute="bottom" id="b1Z-ch-iYu"/>
                             <constraint firstItem="occ-Tq-1XJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e3K-LY-cBd"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eHG-eF-NQg" secondAttribute="bottom" constant="55" id="go5-ZA-9aq"/>
                             <constraint firstItem="occ-Tq-1XJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lav-wQ-0S8"/>
+                            <constraint firstItem="UKi-8K-iEU" firstAttribute="trailing" secondItem="eHG-eF-NQg" secondAttribute="trailing" id="meC-Ws-RY8"/>
+                            <constraint firstItem="UKi-8K-iEU" firstAttribute="top" secondItem="eHG-eF-NQg" secondAttribute="bottom" constant="1" id="ytE-T8-5Mi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Kl-ew-zzj"/>
@@ -137,19 +149,19 @@
                     </tabBar>
                     <connections>
                         <segue destination="TAk-eN-OtC" kind="relationship" relationship="viewControllers" id="WdW-K0-Lz1"/>
-                        <segue destination="HXc-hs-Dgp" kind="relationship" relationship="viewControllers" id="gud-he-YhM"/>
                         <segue destination="4he-d6-8SL" kind="relationship" relationship="viewControllers" id="NU8-KQ-qQ2"/>
+                        <segue destination="HXc-hs-Dgp" kind="relationship" relationship="viewControllers" id="gud-he-YhM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02c-IC-fMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="38.23088455772114"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="oT5-vS-1fo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TAk-eN-OtC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="p37-zY-KX4"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="music-7" id="p37-zY-KX4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="crZ-sW-dHv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -164,7 +176,7 @@
             </objects>
             <point key="canvasLocation" x="1072.8" y="38.23088455772114"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="qeL-yr-12h">
             <objects>
                 <viewController id="HXc-hs-Dgp" customClass="SettingsViewController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -177,13 +189,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ygs-5V-eBb"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear-7" id="ygs-5V-eBb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZP-Sb-66j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1154" y="1044"/>
         </scene>
-        <!--Item-->
+        <!--Info-->
         <scene sceneID="L04-2m-Z5O">
             <objects>
                 <viewController id="4he-d6-8SL" customClass="InformationViewController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -196,7 +208,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ApM-NP-s3Z"/>
+                    <tabBarItem key="tabBarItem" title="Info" id="ApM-NP-s3Z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPH-o0-KrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,7 +217,10 @@
     </scenes>
     <resources>
         <image name="247logo" width="942" height="69"/>
+        <image name="Bol.comBanner.jpeg" width="477" height="105"/>
+        <image name="gear-7" width="30" height="30"/>
         <image name="logo-247spice" width="800" height="800"/>
+        <image name="music-7" width="30" height="30"/>
         <image name="play-button-icon-png-29" width="800" height="800"/>
     </resources>
 </document>
