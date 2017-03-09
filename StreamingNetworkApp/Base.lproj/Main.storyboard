@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lC5-Ac-YG5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eHG-eF-NQg">
+                                <rect key="frame" x="0.0" y="133" width="375" height="430"/>
+                                <color key="backgroundColor" red="0.9882352941176471" green="0.76078431372549016" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.41659311030000001" green="0.72955985239999999" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EOF-cS-D3J">
+                                    <size key="itemSize" width="195" height="195"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="8cN-9l-ecz" customClass="MyCollectionViewCell" customModule="StreamingNetworkApp" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="0.0" width="195" height="195"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="195" height="195"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gip-su-sdk">
+                                                    <rect key="frame" x="8" y="25" width="179" height="128"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                                    <color key="textColor" red="0.9882352941176471" green="0.76078431372549016" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-247spice" translatesAutoresizingMaskIntoConstraints="NO" id="6jX-1c-kWy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="195" height="195"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="gip-su-sdk" firstAttribute="top" secondItem="8cN-9l-ecz" secondAttribute="topMargin" constant="17" id="aK2-dA-9dr"/>
+                                            <constraint firstItem="gip-su-sdk" firstAttribute="leading" secondItem="8cN-9l-ecz" secondAttribute="leadingMargin" id="etd-1z-qB9"/>
+                                            <constraint firstItem="gip-su-sdk" firstAttribute="trailing" secondItem="8cN-9l-ecz" secondAttribute="trailingMargin" id="mSy-zO-b37"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="gip-su-sdk" secondAttribute="bottom" constant="34" id="o0m-k1-Uct"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="myLabel" destination="gip-su-sdk" id="f87-9f-hj5"/>
+                                            <segue destination="CSG-zk-jYT" kind="show" id="Yhc-9K-xRM"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pm9-Lb-514"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dFc-9N-2S1"/>
+                                </connections>
+                            </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="247logo" translatesAutoresizingMaskIntoConstraints="NO" id="occ-Tq-1XJ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="69"/>
+                                <color key="backgroundColor" red="0.81960784313725488" green="0.85882352941176465" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="occ-Tq-1XJ" secondAttribute="trailing" id="6cl-LJ-SNi"/>
+                            <constraint firstItem="eHG-eF-NQg" firstAttribute="top" secondItem="occ-Tq-1XJ" secondAttribute="bottom" id="8gc-yT-2Pe"/>
+                            <constraint firstAttribute="trailing" secondItem="eHG-eF-NQg" secondAttribute="trailing" id="J3S-a9-0Lj"/>
+                            <constraint firstItem="eHG-eF-NQg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bRc-mx-kWC"/>
+                            <constraint firstItem="occ-Tq-1XJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e3K-LY-cBd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eHG-eF-NQg" secondAttribute="bottom" constant="55" id="go5-ZA-9aq"/>
+                            <constraint firstItem="occ-Tq-1XJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lav-wQ-0S8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Kl-ew-zzj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2063.1999999999998" y="38.23088455772114"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="gfc-aI-jhk">
+            <objects>
+                <viewController id="CSG-zk-jYT" customClass="DetailViewController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5uc-fj-0Aj"/>
+                        <viewControllerLayoutGuide type="bottom" id="bTa-re-l7k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zst-Oc-ahS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-247spice" translatesAutoresizingMaskIntoConstraints="NO" id="cQz-vw-ZML">
+                                <rect key="frame" x="54" y="139" width="267" height="310"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="247logo" translatesAutoresizingMaskIntoConstraints="NO" id="6cY-ot-Sg0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.81960784313725488" green="0.85882352941176465" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bq-Vq-7di">
+                                <rect key="frame" x="150" y="518" width="75" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play Button" image="play-button-icon-png-29"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BDl-4h-7oH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2063" y="1044"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="mje-MF-fgx">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lC5-Ac-YG5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ZyK-oh-903">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TAk-eN-OtC" kind="relationship" relationship="viewControllers" id="WdW-K0-Lz1"/>
+                        <segue destination="HXc-hs-Dgp" kind="relationship" relationship="viewControllers" id="gud-he-YhM"/>
+                        <segue destination="4he-d6-8SL" kind="relationship" relationship="viewControllers" id="NU8-KQ-qQ2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="02c-IC-fMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="38.23088455772114"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="oT5-vS-1fo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TAk-eN-OtC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="p37-zY-KX4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="crZ-sW-dHv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eUf-Ye-o3I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="84I-is-309" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072.8" y="38.23088455772114"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="qeL-yr-12h">
+            <objects>
+                <viewController id="HXc-hs-Dgp" customClass="SettingsViewController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uNF-Yj-X6h"/>
+                        <viewControllerLayoutGuide type="bottom" id="GvC-5a-sEK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aYM-uS-21Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ygs-5V-eBb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZP-Sb-66j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1154" y="1044"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="L04-2m-Z5O">
+            <objects>
+                <viewController id="4he-d6-8SL" customClass="InformationViewController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z8n-JZ-UBL"/>
+                        <viewControllerLayoutGuide type="bottom" id="okN-Vf-xwd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nEX-7c-bk9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ApM-NP-s3Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPH-o0-KrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="1044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="247logo" width="942" height="69"/>
+        <image name="logo-247spice" width="800" height="800"/>
+        <image name="play-button-icon-png-29" width="800" height="800"/>
+    </resources>
+</document>
