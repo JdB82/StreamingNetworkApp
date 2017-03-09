@@ -20,4 +20,4 @@ target 'StreamingNetworkApp' do
 end
 
 pod 'Firebase/Core'
-
+pod 'Firebase/Database'
