@@ -12,7 +12,7 @@
 		6003702F1E716AE60095CE53 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6003702E1E716AE60095CE53 /* InformationViewController.swift */; };
 		6003703A1E719BBA0095CE53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 600370391E719BBA0095CE53 /* GoogleService-Info.plist */; };
 		600FE6B31E705D41005D208B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600FE6B21E705D41005D208B /* AppDelegate.swift */; };
-		600FE6B51E705D41005D208B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600FE6B41E705D41005D208B /* ViewController.swift */; };
+		600FE6B51E705D41005D208B /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600FE6B41E705D41005D208B /* CollectionViewController.swift */; };
 		600FE6B81E705D41005D208B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 600FE6B61E705D41005D208B /* Main.storyboard */; };
 		600FE6BA1E705D41005D208B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 600FE6B91E705D41005D208B /* Assets.xcassets */; };
 		600FE6BD1E705D41005D208B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 600FE6BB1E705D41005D208B /* LaunchScreen.storyboard */; };
@@ -55,7 +55,7 @@
 		600370391E719BBA0095CE53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		600FE6AF1E705D41005D208B /* StreamingNetworkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamingNetworkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		600FE6B21E705D41005D208B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		600FE6B41E705D41005D208B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		600FE6B41E705D41005D208B /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		600FE6B71E705D41005D208B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		600FE6B91E705D41005D208B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		600FE6BC1E705D41005D208B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				600FE6B21E705D41005D208B /* AppDelegate.swift */,
-				600FE6B41E705D41005D208B /* ViewController.swift */,
+				600FE6B41E705D41005D208B /* CollectionViewController.swift */,
 				600FE6E01E705D7C005D208B /* MyCollectionViewCell.swift */,
 				600370221E71663B0095CE53 /* DetailViewController.swift */,
 				6003702C1E716AA60095CE53 /* SettingsViewController.swift */,
@@ -510,7 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				600FE6B51E705D41005D208B /* ViewController.swift in Sources */,
+				600FE6B51E705D41005D208B /* CollectionViewController.swift in Sources */,
 				600FE6B31E705D41005D208B /* AppDelegate.swift in Sources */,
 				600FE6E11E705D7C005D208B /* MyCollectionViewCell.swift in Sources */,
 				604007AB1E71C06B00B8035C /* RadioData.swift in Sources */,

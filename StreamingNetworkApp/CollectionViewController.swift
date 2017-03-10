@@ -7,12 +7,12 @@
 //
 
 import UIKit
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
     var items = ["247Jazz", "247Blitz", "247Spice", "247Ultra", "247Event", "Q-Dance", "247The Beat", "Downstation Buddha"]
     
-    // MARK: - UICollectionViewDataSource protocol
+    // MARK:  UICollectionViewDataSource protocol
     
     // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -26,26 +26,26 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! MyCollectionViewCell
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        cell.myLabel.text = self.items[indexPath.item]
+        cell.myLabel.text = self.items[indexPath.item] //Put in your own array!
         cell.backgroundColor = UIColor.black
         cell.layer.borderColor = UIColor.darkGray.cgColor
         cell.layer.borderWidth = 3
         cell.layer.cornerRadius = 50
         // make cell more visible in our example project
         
-        // change background color when user touches cell
-        func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-            let cell = collectionView.cellForItem(at: indexPath)
-            cell?.backgroundColor = UIColor.red
-        }
-        
-        // change background color back when user releases touch
-        func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
-            let cell = collectionView.cellForItem(at: indexPath)
-            cell?.backgroundColor = UIColor.cyan
-        }
-        
         return cell
+    }
+    
+    // change background color when user touches cell
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.red
+    }
+    
+    // change background color back when user releases touch
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.cyan
     }
     
     // MARK: - UICollectionViewDelegate protocol
@@ -55,8 +55,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         print("You selected cell #\(indexPath.item)!")
     }
     
+    // MARK: viewDidLoad.
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DataProvider.sharedInstance.getRadioData()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     

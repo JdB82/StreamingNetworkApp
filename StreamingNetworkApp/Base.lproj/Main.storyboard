@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Collection View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CollectionViewController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -68,8 +68,8 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pm9-Lb-514"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dFc-9N-2S1"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="crQ-4n-5fu"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="E15-YL-LZ5"/>
                                 </connections>
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="247logo" translatesAutoresizingMaskIntoConstraints="NO" id="occ-Tq-1XJ">
@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2063.1999999999998" y="38.23088455772114"/>
+            <point key="canvasLocation" x="1073" y="1044"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="gfc-aI-jhk">
@@ -115,27 +115,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-247spice" translatesAutoresizingMaskIntoConstraints="NO" id="cQz-vw-ZML">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-247spice" translatesAutoresizingMaskIntoConstraints="NO" id="cQz-vw-ZML">
                                 <rect key="frame" x="54" y="139" width="267" height="310"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="310" id="7JU-QA-VQ6"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="247logo" translatesAutoresizingMaskIntoConstraints="NO" id="6cY-ot-Sg0">
-                                <rect key="frame" x="0.0" y="64" width="375" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="247logo" translatesAutoresizingMaskIntoConstraints="NO" id="6cY-ot-Sg0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="49"/>
                                 <color key="backgroundColor" red="0.81960784313725488" green="0.85882352941176465" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="ldM-3z-a9s"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bq-Vq-7di">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bq-Vq-7di">
                                 <rect key="frame" x="150" y="518" width="75" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play Button" image="play-button-icon-png-29"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="cQz-vw-ZML" firstAttribute="top" secondItem="6cY-ot-Sg0" secondAttribute="bottom" constant="26" id="2m3-nq-qbw"/>
+                            <constraint firstItem="6cY-ot-Sg0" firstAttribute="leading" secondItem="Zst-Oc-ahS" secondAttribute="leading" id="DbX-bn-8yu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4bq-Vq-7di" secondAttribute="trailing" constant="134" id="EFH-ma-7lt"/>
+                            <constraint firstItem="4bq-Vq-7di" firstAttribute="top" secondItem="cQz-vw-ZML" secondAttribute="bottom" constant="69" id="Kht-DF-J6d"/>
+                            <constraint firstItem="cQz-vw-ZML" firstAttribute="leading" secondItem="Zst-Oc-ahS" secondAttribute="leadingMargin" constant="38" id="LTc-EN-PzW"/>
+                            <constraint firstItem="4bq-Vq-7di" firstAttribute="leading" secondItem="Zst-Oc-ahS" secondAttribute="leadingMargin" constant="134" id="QFS-pQ-BNL"/>
+                            <constraint firstItem="cQz-vw-ZML" firstAttribute="top" secondItem="Zst-Oc-ahS" secondAttribute="top" constant="139" id="SJM-nI-IN5"/>
+                            <constraint firstItem="cQz-vw-ZML" firstAttribute="centerX" secondItem="4bq-Vq-7di" secondAttribute="centerX" id="UlR-kW-1fh"/>
+                            <constraint firstItem="bTa-re-l7k" firstAttribute="top" secondItem="4bq-Vq-7di" secondAttribute="bottom" constant="46" id="iEW-P7-Jw5"/>
+                            <constraint firstItem="6cY-ot-Sg0" firstAttribute="top" secondItem="5uc-fj-0Aj" secondAttribute="bottom" id="onE-Kb-pzT"/>
+                            <constraint firstAttribute="trailing" secondItem="6cY-ot-Sg0" secondAttribute="trailing" id="raS-iX-3qa"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDl-4h-7oH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2063" y="1044"/>
+            <point key="canvasLocation" x="1073" y="1952"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mje-MF-fgx">
@@ -187,13 +203,42 @@
                     <view key="view" contentMode="scaleToFill" id="aYM-uS-21Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="247logo" translatesAutoresizingMaskIntoConstraints="NO" id="MUQ-Qk-XU0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.85882352939999995" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="T2J-tr-BRf"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Settings" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GVz-RT-eHa">
+                                <rect key="frame" x="0.0" y="74" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="IOw-SA-YGT"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="29"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="GvC-5a-sEK" firstAttribute="top" secondItem="GVz-RT-eHa" secondAttribute="bottom" constant="514" id="2Qx-E8-gLo"/>
+                            <constraint firstItem="GvC-5a-sEK" firstAttribute="top" secondItem="MUQ-Qk-XU0" secondAttribute="bottom" constant="569" id="7o5-nZ-tAz"/>
+                            <constraint firstItem="MUQ-Qk-XU0" firstAttribute="top" secondItem="aYM-uS-21Z" secondAttribute="top" id="AKD-QB-zSh"/>
+                            <constraint firstItem="GVz-RT-eHa" firstAttribute="leading" secondItem="aYM-uS-21Z" secondAttribute="leading" id="Grh-2P-28f"/>
+                            <constraint firstItem="MUQ-Qk-XU0" firstAttribute="leading" secondItem="aYM-uS-21Z" secondAttribute="leading" id="NsP-ny-n2a"/>
+                            <constraint firstAttribute="trailing" secondItem="GVz-RT-eHa" secondAttribute="trailing" id="X6K-sD-1Pb"/>
+                            <constraint firstAttribute="trailing" secondItem="MUQ-Qk-XU0" secondAttribute="trailing" id="fAl-Ze-Qqe"/>
+                            <constraint firstItem="GVz-RT-eHa" firstAttribute="top" secondItem="MUQ-Qk-XU0" secondAttribute="bottom" constant="25" id="iO9-CC-Dmi"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear-7" id="ygs-5V-eBb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZP-Sb-66j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1154" y="1044"/>
+            <point key="canvasLocation" x="-822" y="1044"/>
         </scene>
         <!--Info-->
         <scene sceneID="L04-2m-Z5O">
@@ -206,13 +251,49 @@
                     <view key="view" contentMode="scaleToFill" id="nEX-7c-bk9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aa9-W6-tQc">
+                                <rect key="frame" x="16" y="112" width="343" height="424"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <string key="text">Streaming media is video or audio content sent in compressed form over the Internet and played immediately, rather than being saved to the hard drive.
+With streaming media, a user does not have to wait to download a file to play it. Because the media is sent in a continuous stream of data it can play as it arrives. Users can pause, rewind or fast-forward, just as they could with a downloaded file, unless the content is being streamed live.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="247logo" translatesAutoresizingMaskIntoConstraints="NO" id="UhF-DW-w9r">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.85882352939999995" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="4tC-CY-0aa"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Information" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r4f-U7-FT4">
+                                <rect key="frame" x="0.0" y="74" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="29"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="r4f-U7-FT4" secondAttribute="trailing" id="ADG-z0-JLj"/>
+                            <constraint firstItem="UhF-DW-w9r" firstAttribute="top" secondItem="nEX-7c-bk9" secondAttribute="top" id="Dv5-jh-V6s"/>
+                            <constraint firstAttribute="trailing" secondItem="UhF-DW-w9r" secondAttribute="trailing" id="Eex-VL-Xep"/>
+                            <constraint firstItem="r4f-U7-FT4" firstAttribute="leading" secondItem="nEX-7c-bk9" secondAttribute="leading" id="Gxb-fK-VlX"/>
+                            <constraint firstItem="aa9-W6-tQc" firstAttribute="trailing" secondItem="nEX-7c-bk9" secondAttribute="trailingMargin" id="RTo-Rr-4zp"/>
+                            <constraint firstItem="aa9-W6-tQc" firstAttribute="leading" secondItem="nEX-7c-bk9" secondAttribute="leadingMargin" id="Sx4-6L-hCX"/>
+                            <constraint firstItem="aa9-W6-tQc" firstAttribute="top" secondItem="r4f-U7-FT4" secondAttribute="bottom" constant="8" id="Zpv-cj-hEU"/>
+                            <constraint firstItem="UhF-DW-w9r" firstAttribute="leading" secondItem="nEX-7c-bk9" secondAttribute="leading" id="ZsQ-kW-brU"/>
+                            <constraint firstItem="r4f-U7-FT4" firstAttribute="top" secondItem="UhF-DW-w9r" secondAttribute="bottom" constant="25" id="d7q-ML-ZvO"/>
+                            <constraint firstItem="okN-Vf-xwd" firstAttribute="top" secondItem="aa9-W6-tQc" secondAttribute="bottom" constant="82" id="fFT-Y3-24I"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" id="ApM-NP-s3Z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPH-o0-KrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134" y="1044"/>
+            <point key="canvasLocation" x="133.59999999999999" y="1043.9280359820091"/>
         </scene>
     </scenes>
     <resources>
