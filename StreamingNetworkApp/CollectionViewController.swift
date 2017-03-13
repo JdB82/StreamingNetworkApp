@@ -7,10 +7,17 @@
 //
 
 import UIKit
+
 class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
-    var items = ["247Jazz", "247Blitz", "247Spice", "247Ultra", "247Event", "Q-Dance", "247The Beat", "Downstation Buddha"]
+    
+    // Chances done 12-3.
+    var radioStationData: [RadioData] = []
+    
+    @IBOutlet weak var 247Blitz: UILabel!
+    
     
     // MARK:  UICollectionViewDataSource protocol
     
@@ -26,7 +33,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! MyCollectionViewCell
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        cell.myLabel.text = self.items[indexPath.item] //Put in your own array!
+        cell.myLabel.text = self.radioStationData[RadioData] //Put in your own array!
         cell.backgroundColor = UIColor.black
         cell.layer.borderColor = UIColor.darkGray.cgColor
         cell.layer.borderWidth = 3
@@ -60,9 +67,28 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Chances made 12-3.
+        
+        let nib = UINib(nibName: "MyCollectionViewCell", bundle: nil)
+        self.collectionView.register(nib, forCellReuseIdentifier: "MyCollectionViewCell")
+        
+        // Register to receive notification data // Hieronder stemt Notification af op het keywoord "BucketWishesnotify".
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(CollectionViewController.notifyObservers),
+                                               name:  NSNotification.Name(rawValue: "RadioDatanotify" ),
+                                               object: nil)
+        
         DataProvider.sharedInstance.getRadioData()
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func notifyObservers(notification: NSNotification) {
+        var bucketlistDictionary: Dictionary<String,[RadioData]> = notification.userInfo as! Dictionary<String,[RadioData]>
+        radioStationData = bucketlistDictionary["RadioData"]!
+        
+        // collectionView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

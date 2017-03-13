@@ -97,11 +97,22 @@
                             <constraint firstItem="UKi-8K-iEU" firstAttribute="top" secondItem="eHG-eF-NQg" secondAttribute="bottom" constant="1" id="ytE-T8-5Mi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3Kl-ew-zzj"/>
+                    <navigationItem key="navigationItem" id="3Kl-ew-zzj">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="RYe-nc-C6w">
+                            <connections>
+                                <segue destination="HXc-hs-Dgp" kind="presentation" id="9XB-My-gQQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Info" id="vKL-bP-PGA">
+                            <connections>
+                                <segue destination="4he-d6-8SL" kind="presentation" id="rMS-o0-m6U"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="1044"/>
+            <point key="canvasLocation" x="2071" y="38"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="gfc-aI-jhk">
@@ -151,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDl-4h-7oH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="1952"/>
+            <point key="canvasLocation" x="1073" y="904"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mje-MF-fgx">
@@ -165,8 +176,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="TAk-eN-OtC" kind="relationship" relationship="viewControllers" id="WdW-K0-Lz1"/>
-                        <segue destination="4he-d6-8SL" kind="relationship" relationship="viewControllers" id="NU8-KQ-qQ2"/>
-                        <segue destination="HXc-hs-Dgp" kind="relationship" relationship="viewControllers" id="gud-he-YhM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02c-IC-fMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -238,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZP-Sb-66j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-822" y="1044"/>
+            <point key="canvasLocation" x="2070" y="904"/>
         </scene>
         <!--Info-->
         <scene sceneID="L04-2m-Z5O">
@@ -293,7 +302,7 @@ With streaming media, a user does not have to wait to download a file to play it
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPH-o0-KrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="1043.9280359820091"/>
+            <point key="canvasLocation" x="134" y="904"/>
         </scene>
     </scenes>
     <resources>
