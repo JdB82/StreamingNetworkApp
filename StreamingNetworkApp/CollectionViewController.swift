@@ -6,24 +6,52 @@
 //  Copyright © 2017 Jeroen de Bie. All rights reserved.
 //
 
+// Import your UI frameworks.
 import UIKit
+import FirebaseDatabase
 
+// Implement the protocols I need.
 class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
 
-    
-    let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
-    
-    // Chances done 12-3.
+    // make a var of the nam radioStationData where I store the array [RadioData]
     var radioStationData: [RadioData] = []
     
-    @IBOutlet weak var 247Blitz: UILabel!
+    @IBOutlet weak var radioCollectionView: UICollectionView!
+    @IBOutlet weak var myLabel: UILabel!
     
+    // MARK: viewDidLoad.
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let nib = UINib(nibName: collectionViewXib , bundle: nil)
+        self.radioCollectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        // Register to receive notification data // Hieronder stemt Notification af op het keywoord "RadioDatanotify".
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(CollectionViewController.notifyObservers),
+                                               name:  NSNotification.Name(rawValue: notificationChannel),
+                                               object: nil)
+        
+        DataProvider.sharedInstance.getRadioData()
+        
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func notifyObservers(notification: NSNotification) {
+        var radioDictionary: Dictionary<String,[RadioData]> = notification.userInfo as! Dictionary<String,[RadioData]>
+        radioStationData = radioDictionary[radioDictionaryKey]!
+        
+        radioCollectionView.reloadData()
+    }
     
     // MARK:  UICollectionViewDataSource protocol
     
-    // tell the collection view how many cells to make
+    // tell the collection view how many cells to make.
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items.count
+        return radioStationData.count
     }
     
     // make a cell for each cell index path
@@ -33,68 +61,25 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! MyCollectionViewCell
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        cell.myLabel.text = self.radioStationData[RadioData] //Put in your own array!
-        cell.backgroundColor = UIColor.black
+        cell.myLabel.text = self.radioStationData[indexPath.row].stationName
+        cell.backgroundColor = UIColor.white
         cell.layer.borderColor = UIColor.darkGray.cgColor
         cell.layer.borderWidth = 3
         cell.layer.cornerRadius = 50
-        // make cell more visible in our example project
         
         return cell
-    }
-    
-    // change background color when user touches cell
-    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor = UIColor.red
-    }
-    
-    // change background color back when user releases touch
-    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor = UIColor.cyan
     }
     
     // MARK: - UICollectionViewDelegate protocol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         // handle tap events
+        
         print("You selected cell #\(indexPath.item)!")
     }
     
-    // MARK: viewDidLoad.
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //Chances made 12-3.
-        
-        let nib = UINib(nibName: "MyCollectionViewCell", bundle: nil)
-        self.collectionView.register(nib, forCellReuseIdentifier: "MyCollectionViewCell")
-        
-        // Register to receive notification data // Hieronder stemt Notification af op het keywoord "BucketWishesnotify".
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(CollectionViewController.notifyObservers),
-                                               name:  NSNotification.Name(rawValue: "RadioDatanotify" ),
-                                               object: nil)
-        
-        DataProvider.sharedInstance.getRadioData()
-        
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    func notifyObservers(notification: NSNotification) {
-        var bucketlistDictionary: Dictionary<String,[RadioData]> = notification.userInfo as! Dictionary<String,[RadioData]>
-        radioStationData = bucketlistDictionary["RadioData"]!
-        
-        // collectionView.reloadData()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
     
 
 }
