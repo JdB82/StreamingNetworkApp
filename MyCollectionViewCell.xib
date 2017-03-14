@@ -8,30 +8,42 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Fort Foundry - Termina-Black.otf">
+            <string>Termina-Black</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCollectionViewCell" id="rDh-hF-6Tq" customClass="MyCollectionViewCell" customModule="StreamingNetworkApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="117" height="119"/>
+            <rect key="frame" x="0.0" y="0.0" width="251" height="146"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="117" height="119"/>
+                <rect key="frame" x="0.0" y="0.0" width="251" height="146"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqd-oc-N08">
-                        <rect key="frame" x="8" y="49" width="101" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqd-oc-N08">
+                        <rect key="frame" x="0.0" y="0.0" width="251" height="146"/>
+                        <color key="backgroundColor" red="0.10980392156862745" green="0.30980392156862746" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" name="Termina-Black" family="Termina" pointSize="27"/>
+                        <color key="textColor" red="0.55686274509803924" green="0.80000000000000004" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <size key="customSize" width="117" height="119"/>
+            <constraints>
+                <constraint firstItem="oqd-oc-N08" firstAttribute="leading" secondItem="rDh-hF-6Tq" secondAttribute="leading" id="3y7-Yx-aQo"/>
+                <constraint firstItem="oqd-oc-N08" firstAttribute="top" secondItem="rDh-hF-6Tq" secondAttribute="top" id="DWw-R9-lkp"/>
+                <constraint firstAttribute="trailing" secondItem="oqd-oc-N08" secondAttribute="trailing" id="SBh-Fh-VBb"/>
+                <constraint firstAttribute="bottom" secondItem="oqd-oc-N08" secondAttribute="bottom" id="uEy-AU-bj6"/>
+            </constraints>
+            <size key="customSize" width="251" height="146"/>
             <connections>
                 <outlet property="myLabel" destination="oqd-oc-N08" id="pXf-ao-fxw"/>
             </connections>
-            <point key="canvasLocation" x="-159.5" y="210.5"/>
+            <point key="canvasLocation" x="-92.5" y="224"/>
         </collectionViewCell>
     </objects>
 </document>
