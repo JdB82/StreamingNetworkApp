@@ -25,6 +25,10 @@
 		604007A21E71ABB500B8035C /* StreamingNetworkAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604007991E71AAAE00B8035C /* StreamingNetworkAppTests.swift */; };
 		604007A41E71AF0D00B8035C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604007A31E71AF0D00B8035C /* DataProvider.swift */; };
 		604007AB1E71C06B00B8035C /* RadioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604007AA1E71C06B00B8035C /* RadioData.swift */; };
+		60E38A2C1E782C0900A20807 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E38A2B1E782C0900A20807 /* MainNavigationController.swift */; };
+		60E38A2F1E78362300A20807 /* GlobalParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E38A2E1E78362300A20807 /* GlobalParams.swift */; };
+		60E38A301E783FEB00A20807 /* Fort Foundry - Termina-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 60E38A271E7800CC00A20807 /* Fort Foundry - Termina-Black.otf */; };
+		60E38A331E78405C00A20807 /* Fort Foundry - Termina-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 60E38A261E7800BD00A20807 /* Fort Foundry - Termina-Regular.otf */; };
 		B920B207F0B53C89A4DEE37A /* Pods_StreamingNetworkAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C761EF9BC797F220ECE91F /* Pods_StreamingNetworkAppTests.framework */; };
 		ED47A3521781D12A5EE7573D /* Pods_StreamingNetworkAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB34C77DB74464BA35896C5 /* Pods_StreamingNetworkAppUITests.framework */; };
 		F87F3C5430182AB1188EB6B3 /* Pods_StreamingNetworkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41944E92FFF745E02BE8F04D /* Pods_StreamingNetworkApp.framework */; };
@@ -73,6 +77,10 @@
 		6040079C1E71AAAE00B8035C /* StreamingNetworkAppUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingNetworkAppUITests.swift; sourceTree = "<group>"; };
 		604007A31E71AF0D00B8035C /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = StreamingNetworkApp/DataProvider.swift; sourceTree = "<group>"; };
 		604007AA1E71C06B00B8035C /* RadioData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadioData.swift; path = StreamingNetworkApp/RadioData.swift; sourceTree = "<group>"; };
+		60E38A261E7800BD00A20807 /* Fort Foundry - Termina-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Fort Foundry - Termina-Regular.otf"; path = "StreamingNetworkApp/Fort Foundry - Termina-Regular.otf"; sourceTree = "<group>"; };
+		60E38A271E7800CC00A20807 /* Fort Foundry - Termina-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Fort Foundry - Termina-Black.otf"; path = "StreamingNetworkApp/Fort Foundry - Termina-Black.otf"; sourceTree = "<group>"; };
+		60E38A2B1E782C0900A20807 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainNavigationController.swift; path = StreamingNetworkApp/MainNavigationController.swift; sourceTree = "<group>"; };
+		60E38A2E1E78362300A20807 /* GlobalParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalParams.swift; sourceTree = "<group>"; };
 		61C761EF9BC797F220ECE91F /* Pods_StreamingNetworkAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamingNetworkAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7101C741468EB827F9C6F777 /* Pods-StreamingNetworkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkApp/Pods-StreamingNetworkApp.release.xcconfig"; sourceTree = "<group>"; };
 		AE22B7DD591C07F773AD9C91 /* Pods-StreamingNetworkAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkAppTests/Pods-StreamingNetworkAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,8 +178,10 @@
 		602072F81E76DE9A001D5C33 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				600FE6B61E705D41005D208B /* Main.storyboard */,
-				600FE6BB1E705D41005D208B /* LaunchScreen.storyboard */,
+				60E38A2A1E7802E800A20807 /* Storyboards */,
+				60E38A291E7800F400A20807 /* LaunchScreen */,
+				60E38A2D1E782C1100A20807 /* Navigation */,
+				60E38A281E7800D600A20807 /* Font */,
 			);
 			name = Layout;
 			sourceTree = "<group>";
@@ -227,6 +237,44 @@
 				604007A31E71AF0D00B8035C /* DataProvider.swift */,
 			);
 			name = DataLayer;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		60E38A281E7800D600A20807 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				60E38A261E7800BD00A20807 /* Fort Foundry - Termina-Regular.otf */,
+				60E38A271E7800CC00A20807 /* Fort Foundry - Termina-Black.otf */,
+			);
+			name = Font;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		60E38A291E7800F400A20807 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				600FE6BB1E705D41005D208B /* LaunchScreen.storyboard */,
+			);
+			name = LaunchScreen;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		60E38A2A1E7802E800A20807 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				600FE6B61E705D41005D208B /* Main.storyboard */,
+			);
+			name = Storyboards;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		60E38A2D1E782C1100A20807 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				60E38A2B1E782C0900A20807 /* MainNavigationController.swift */,
+				60E38A2E1E78362300A20807 /* GlobalParams.swift */,
+			);
+			name = Navigation;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -372,10 +420,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60E38A331E78405C00A20807 /* Fort Foundry - Termina-Regular.otf in Resources */,
 				600FE6BD1E705D41005D208B /* LaunchScreen.storyboard in Resources */,
 				602072FC1E76FC7B001D5C33 /* MyCollectionViewCell.xib in Resources */,
 				6003703A1E719BBA0095CE53 /* GoogleService-Info.plist in Resources */,
 				600FE6BA1E705D41005D208B /* Assets.xcassets in Resources */,
+				60E38A301E783FEB00A20807 /* Fort Foundry - Termina-Black.otf in Resources */,
 				600FE6B81E705D41005D208B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,12 +591,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60E38A2C1E782C0900A20807 /* MainNavigationController.swift in Sources */,
 				600FE6B51E705D41005D208B /* CollectionViewController.swift in Sources */,
 				600FE6B31E705D41005D208B /* AppDelegate.swift in Sources */,
 				600FE6E11E705D7C005D208B /* MyCollectionViewCell.swift in Sources */,
 				604007AB1E71C06B00B8035C /* RadioData.swift in Sources */,
 				604007A41E71AF0D00B8035C /* DataProvider.swift in Sources */,
 				6003702D1E716AA60095CE53 /* SettingsViewController.swift in Sources */,
+				60E38A2F1E78362300A20807 /* GlobalParams.swift in Sources */,
 				600370231E71663B0095CE53 /* DetailViewController.swift in Sources */,
 				6003702F1E716AE60095CE53 /* InformationViewController.swift in Sources */,
 				602072FE1E76FF81001D5C33 /* Constants.swift in Sources */,
@@ -591,6 +643,7 @@
 				600FE6B71E705D41005D208B /* Base */,
 			);
 			name = Main.storyboard;
+			path = StreamingNetworkApp;
 			sourceTree = "<group>";
 		};
 		600FE6BB1E705D41005D208B /* LaunchScreen.storyboard */ = {
@@ -599,6 +652,7 @@
 				600FE6BC1E705D41005D208B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = StreamingNetworkApp;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

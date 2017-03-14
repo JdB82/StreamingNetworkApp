@@ -25,6 +25,8 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = GlobalParams.main.title
+        
         let nib = UINib(nibName: collectionViewXib , bundle: nil)
         self.radioCollectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
         
@@ -65,7 +67,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         cell.backgroundColor = UIColor.white
         cell.layer.borderColor = UIColor.darkGray.cgColor
         cell.layer.borderWidth = 3
-        cell.layer.cornerRadius = 50
+        cell.layer.cornerRadius = 45
         
         return cell
     }
@@ -75,13 +77,10 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         // handle tap events
-        
+        performSegue(withIdentifier: "detailSegue", sender: self)
         print("You selected cell #\(indexPath.item)!")
     }
     
-
-    
-
 }
 
 
