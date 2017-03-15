@@ -15,3 +15,6 @@ let notificationChannel = "RadioDatanotify"
 let radioDictionaryKey = "RadioData"
 
 let collectionViewXib = "MyCollectionViewCell"
+
+let detailSeque = "detailSegue"
+

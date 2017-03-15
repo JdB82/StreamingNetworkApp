@@ -7,12 +7,25 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailViewController: UIViewController {
-
+    
+    var theStationPlaying: RadioData?
+    
+    @IBOutlet weak var currentStationPlaying: UIImageView!
+    
+    @IBAction func playButton(_ sender: Any) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if let radioStationUrlImage = theStationPlaying?.stationImage {
+            let url = URL(string: radioStationUrlImage)
+            self.currentStationPlaying.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "247logo"))
+        }
         // Do any additional setup after loading the view.
     }
 

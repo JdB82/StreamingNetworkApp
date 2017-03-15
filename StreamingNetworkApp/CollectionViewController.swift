@@ -8,7 +8,9 @@
 
 // Import your UI frameworks.
 import UIKit
+import Kingfisher
 import FirebaseDatabase
+
 
 // Implement the protocols I need.
 class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -16,6 +18,12 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
 
     // make a var of the nam radioStationData where I store the array [RadioData]
     var radioStationData: [RadioData] = []
+    // creating a property.
+    var currentRadioStation: RadioData?
+    
+    
+    // Make a var imageView.
+//    var imageView = [RadioData].stationImage
     
     @IBOutlet weak var radioCollectionView: UICollectionView!
     @IBOutlet weak var myLabel: UILabel!
@@ -54,7 +62,8 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     // tell the collection view how many cells to make.
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return radioStationData.count
-    }
+        
+            }
     
     // make a cell for each cell index path
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -62,8 +71,12 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! MyCollectionViewCell
         
-        // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        cell.myLabel.text = self.radioStationData[indexPath.row].stationImage
+        // Use the outlet in our custom class to get a reference to the UILabel in the cell.
+        // Put in your station image from KF in the cells.
+        if let radioStationUrlImage = radioStationData[indexPath.row].stationImage {
+            let url = URL(string: radioStationUrlImage)
+            cell.stationImages.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "247logo"))
+        }
         cell.backgroundColor = UIColor.white
         cell.layer.borderColor = UIColor.darkGray.cgColor
         cell.layer.borderWidth = 3
@@ -74,11 +87,20 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     // MARK: - UICollectionViewDelegate protocol
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        currentRadioStation = radioStationData[indexPath.row]
         
         // handle tap events
-        performSegue(withIdentifier: "detailSegue", sender: self)
+        performSegue(withIdentifier: detailSeque, sender: self)
         print("You selected cell #\(indexPath.item)!")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == detailSeque {
+            let detailView = segue.destination as! DetailViewController
+            detailView.theStationPlaying = currentRadioStation
+        }
     }
     
 }

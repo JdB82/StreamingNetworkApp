@@ -117,6 +117,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bq-Vq-7di">
                                 <rect key="frame" x="150" y="518" width="75" height="54"/>
                                 <state key="normal" title="Play Button" image="play-button-icon-png-29"/>
+                                <connections>
+                                    <action selector="playButton:" destination="CSG-zk-jYT" eventType="touchUpInside" id="8L9-rR-Hxu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.10980392160000001" green="0.30980392159999998" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -131,6 +134,9 @@
                             <constraint firstItem="bTa-re-l7k" firstAttribute="top" secondItem="4bq-Vq-7di" secondAttribute="bottom" constant="46" id="iEW-P7-Jw5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentStationPlaying" destination="cQz-vw-ZML" id="Ntf-i9-DpI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDl-4h-7oH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

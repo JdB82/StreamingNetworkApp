@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-StreamingNetworkApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B060470D9AF61495CD993D1F44D80B2</key>
+		<key>71E9B91B3EB519807ECEB88280A2951A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>71E9B91B3EB519807ECEB88280A2951A</key>
+		<key>8377C1EA38E0F94106BCA89C6FA7486E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4944FEC314D1A66588651D006273ADE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
