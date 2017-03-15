@@ -63,7 +63,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! MyCollectionViewCell
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        cell.myLabel.text = self.radioStationData[indexPath.row].stationName
+        cell.myLabel.text = self.radioStationData[indexPath.row].stationImage
         cell.backgroundColor = UIColor.white
         cell.layer.borderColor = UIColor.darkGray.cgColor
         cell.layer.borderWidth = 3

@@ -12,6 +12,8 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var myLabel: UILabel!
         
+    @IBOutlet weak var stationImages: UIImageView!
+    
     override func awakeFromNib() {
         
     }

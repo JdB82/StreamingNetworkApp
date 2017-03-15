@@ -15,6 +15,7 @@ import Foundation
 public class RadioData {
 	public var stationName : String?
 	public var url : String?
+    public var stationImage : String?
 
 /**
     Returns an array of models based on given dictionary.
@@ -50,6 +51,7 @@ public class RadioData {
 
 		stationName = dictionary["StationName"] as? String
 		url = dictionary["url"] as? String
+        stationImage = dictionary["imageUrl"] as? String
 	}
 
 		
