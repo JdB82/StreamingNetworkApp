@@ -18,3 +18,10 @@ let collectionViewXib = "MyCollectionViewCell"
 
 let detailSeque = "detailSegue"
 
+struct jsonKeys {
+    static let streamingUrl = "streamingUrl"
+    static let StationName = "StationName"
+    static let stationImage = "stationImage"
+    
+}
+

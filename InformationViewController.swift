@@ -10,6 +10,8 @@ import UIKit
 
 class InformationViewController: UIViewController {
 
+    @IBOutlet weak var returnButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

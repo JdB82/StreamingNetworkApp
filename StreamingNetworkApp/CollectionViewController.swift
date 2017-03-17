@@ -73,14 +73,14 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell.
         // Put in your station image from KF in the cells.
-        if let radioStationUrlImage = radioStationData[indexPath.row].stationImage {
-            let url = URL(string: radioStationUrlImage)
+        if let radioStationImage = radioStationData[indexPath.row].stationImage {
+            let url = URL(string: radioStationImage)
             cell.stationImages.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "247logo"))
         }
         cell.backgroundColor = UIColor.white
-        cell.layer.borderColor = UIColor.darkGray.cgColor
-        cell.layer.borderWidth = 3
-        cell.layer.cornerRadius = 45
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 4
+        cell.layer.cornerRadius = 50
         
         return cell
     }

@@ -19,8 +19,6 @@
 		600FE6E11E705D7C005D208B /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600FE6E01E705D7C005D208B /* MyCollectionViewCell.swift */; };
 		602072FC1E76FC7B001D5C33 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602072FB1E76FC7B001D5C33 /* MyCollectionViewCell.xib */; };
 		602072FE1E76FF81001D5C33 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602072FD1E76FF81001D5C33 /* Constants.swift */; };
-		602072FF1E770094001D5C33 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6040079B1E71AAAE00B8035C /* Info.plist */; };
-		602073001E770099001D5C33 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 604007981E71AAAE00B8035C /* Info.plist */; };
 		604007A11E71ABB200B8035C /* StreamingNetworkAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6040079C1E71AAAE00B8035C /* StreamingNetworkAppUITests.swift */; };
 		604007A21E71ABB500B8035C /* StreamingNetworkAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604007991E71AAAE00B8035C /* StreamingNetworkAppTests.swift */; };
 		604007A41E71AF0D00B8035C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604007A31E71AF0D00B8035C /* DataProvider.swift */; };
@@ -153,7 +151,7 @@
 		600FE6B11E705D41005D208B /* StreamingNetworkApp */ = {
 			isa = PBXGroup;
 			children = (
-				602072F91E76DF0D001D5C33 /* Other */,
+				600FE6B21E705D41005D208B /* AppDelegate.swift */,
 				602072F81E76DE9A001D5C33 /* Layout */,
 				602072FA1E76E457001D5C33 /* Cells */,
 				604007A51E71AF4100B8035C /* DataLayer */,
@@ -184,14 +182,6 @@
 				60E38A281E7800D600A20807 /* Font */,
 			);
 			name = Layout;
-			sourceTree = "<group>";
-		};
-		602072F91E76DF0D001D5C33 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				600FE6B21E705D41005D208B /* AppDelegate.swift */,
-			);
-			name = Other;
 			sourceTree = "<group>";
 		};
 		602072FA1E76E457001D5C33 /* Cells */ = {
@@ -434,7 +424,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				602073001E770099001D5C33 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +431,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				602072FF1E770094001D5C33 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

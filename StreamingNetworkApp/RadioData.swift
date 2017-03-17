@@ -14,7 +14,7 @@ import Foundation
 
 public class RadioData {
 	public var stationName : String?
-	public var url : String?
+	public var streamingUrl : String?
     public var stationImage : String?
 
 /**
@@ -49,9 +49,9 @@ public class RadioData {
 */
 	required public init?(dictionary: NSDictionary) {
 
-		stationName = dictionary["StationName"] as? String
-		url = dictionary["url"] as? String
-        stationImage = dictionary["imageUrl"] as? String
+		stationName = dictionary[jsonKeys.StationName] as? String
+		streamingUrl = dictionary[jsonKeys.streamingUrl] as? String
+        stationImage = dictionary[jsonKeys.stationImage] as? String
 	}
 
 		
@@ -64,8 +64,9 @@ public class RadioData {
 
 		let dictionary = NSMutableDictionary()
 
-		dictionary.setValue(self.stationName, forKey: "StationName")
-		dictionary.setValue(self.url, forKey: "url")
+		dictionary.setValue(self.stationName, forKey: jsonKeys.StationName)
+		dictionary.setValue(self.streamingUrl, forKey: jsonKeys.streamingUrl)
+        dictionary.setValue(self.stationImage, forKey: jsonKeys.stationImage)
 
 		return dictionary
 	}

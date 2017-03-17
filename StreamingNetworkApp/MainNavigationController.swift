@@ -39,7 +39,7 @@ class MainNavigationController: UINavigationController {
         navigationBar.barTintColor = GlobalParams.navigation.barTintColor
         navigationBar.titleTextAttributes = [
             NSFontAttributeName: UIFont(name: "Termina-Black", size: 17)!,
-            NSForegroundColorAttributeName : UIColor.init(red: 255.0/255.0, green: 176.0/255.0, blue: 0.0/255.0, alpha: 1.0)]
+            NSForegroundColorAttributeName : UIColor.init(red: 255.0/255.0, green: 255.0/255.0, blue: 240.0/255.0, alpha: 1.0)]
         
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationBar.clipsToBounds = false
