@@ -22,6 +22,7 @@ struct jsonKeys {
     static let streamingUrl = "streamingUrl"
     static let StationName = "StationName"
     static let stationImage = "stationImage"
+    static let currentSong = "currenSong"
     
 }
 

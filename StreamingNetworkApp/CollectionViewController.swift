@@ -75,7 +75,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         // Put in your station image from KF in the cells.
         if let radioStationImage = radioStationData[indexPath.row].stationImage {
             let url = URL(string: radioStationImage)
-            cell.stationImages.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "247logo"))
+            cell.stationImages.kf.setImage(with: url)
         }
         cell.backgroundColor = UIColor.white
         cell.layer.borderColor = UIColor.black.cgColor

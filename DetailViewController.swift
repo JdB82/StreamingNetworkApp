@@ -13,9 +13,18 @@ import AVFoundation
 class DetailViewController: UIViewController {
     
     var theStationPlaying: RadioData?
+    var currentSongPlayings: RadioData?
     var player: AVPlayer?
     
     @IBOutlet weak var currentStationPlaying: UIImageView!
+    
+    @IBOutlet weak var currentSongPlaying: UIImageView!
+    
+    @IBAction func showCurrentSong(_ sender: Any) {
+        let currentSongUrl = currentSongPlayings?.currentSong
+        let songUrl = NSURL(string: currentSongUrl!)
+        print("the Url = \(songUrl)")
+    }
     
     @IBAction func playButton(_ sender: Any) {
         let urlstring = theStationPlaying?.streamingUrl
@@ -31,6 +40,11 @@ class DetailViewController: UIViewController {
         if let radioStationUrlImage = theStationPlaying?.stationImage {
             let url = URL(string: radioStationUrlImage)
             self.currentStationPlaying.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "247logo"))
+        }
+        
+        if let currentSongPlayingUrl = currentSongPlayings?.currentSong {
+            let url = URL(string: currentSongPlayingUrl)
+            self.currentSongPlaying.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "247logo"))
         }
         // Do any additional setup after loading the view.
     }

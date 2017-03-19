@@ -16,6 +16,8 @@ public class RadioData {
 	public var stationName : String?
 	public var streamingUrl : String?
     public var stationImage : String?
+    public var currentSong : String?
+    
 
 /**
     Returns an array of models based on given dictionary.
@@ -52,6 +54,8 @@ public class RadioData {
 		stationName = dictionary[jsonKeys.StationName] as? String
 		streamingUrl = dictionary[jsonKeys.streamingUrl] as? String
         stationImage = dictionary[jsonKeys.stationImage] as? String
+        currentSong = dictionary[jsonKeys.currentSong] as? String
+        
 	}
 
 		
@@ -67,7 +71,8 @@ public class RadioData {
 		dictionary.setValue(self.stationName, forKey: jsonKeys.StationName)
 		dictionary.setValue(self.streamingUrl, forKey: jsonKeys.streamingUrl)
         dictionary.setValue(self.stationImage, forKey: jsonKeys.stationImage)
-
+        dictionary.setValue(self.currentSong, forKey: jsonKeys.currentSong)
+        
 		return dictionary
 	}
 
