@@ -125,31 +125,37 @@
                                     <action selector="playButton:" destination="CSG-zk-jYT" eventType="touchUpInside" id="8L9-rR-Hxu"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dWN-Du-7JQ">
-                                <rect key="frame" x="58" y="514" width="299" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-247spice" translatesAutoresizingMaskIntoConstraints="NO" id="cQz-vw-ZML">
                                 <rect key="frame" x="58" y="139" width="299" height="379"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaY-uA-3fg">
+                                <rect key="frame" x="58" y="513" width="299" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.10980392160000001" green="0.30980392159999998" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="KaY-uA-3fg" firstAttribute="top" secondItem="5uc-fj-0Aj" secondAttribute="bottom" constant="449" id="10q-7Z-Trn"/>
                             <constraint firstItem="bTa-re-l7k" firstAttribute="top" secondItem="4bq-Vq-7di" secondAttribute="bottom" constant="47" id="2c4-so-jY3"/>
                             <constraint firstAttribute="trailing" secondItem="9Hm-SB-kcp" secondAttribute="trailing" id="5AV-T4-Pbp"/>
                             <constraint firstItem="cQz-vw-ZML" firstAttribute="leading" secondItem="Zst-Oc-ahS" secondAttribute="leadingMargin" constant="38" id="7gH-ok-tJp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KaY-uA-3fg" secondAttribute="trailing" constant="37" id="Cev-jz-bFw"/>
                             <constraint firstItem="cQz-vw-ZML" firstAttribute="centerX" secondItem="4bq-Vq-7di" secondAttribute="centerX" id="INT-GG-5D6"/>
                             <constraint firstItem="4bq-Vq-7di" firstAttribute="centerX" secondItem="Zst-Oc-ahS" secondAttribute="centerX" id="J4N-u0-yj5"/>
+                            <constraint firstItem="KaY-uA-3fg" firstAttribute="leading" secondItem="Zst-Oc-ahS" secondAttribute="leadingMargin" constant="38" id="P2M-zf-agW"/>
                             <constraint firstItem="9Hm-SB-kcp" firstAttribute="leading" secondItem="Zst-Oc-ahS" secondAttribute="leading" id="WZ7-wo-4Hx"/>
                             <constraint firstAttribute="bottom" secondItem="9Hm-SB-kcp" secondAttribute="bottom" id="X6L-Iu-oDu"/>
                             <constraint firstItem="4bq-Vq-7di" firstAttribute="top" secondItem="cQz-vw-ZML" secondAttribute="bottom" constant="82" id="dnK-gB-sjy"/>
+                            <constraint firstItem="4bq-Vq-7di" firstAttribute="top" secondItem="KaY-uA-3fg" secondAttribute="bottom" constant="61" id="eoq-ix-rRf"/>
                             <constraint firstItem="9Hm-SB-kcp" firstAttribute="top" secondItem="Zst-Oc-ahS" secondAttribute="top" id="w8o-CE-jUr"/>
                             <constraint firstItem="cQz-vw-ZML" firstAttribute="top" secondItem="5uc-fj-0Aj" secondAttribute="bottom" constant="75" id="xSf-PU-XLv"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="currentSongPlaying" destination="dWN-Du-7JQ" id="X4m-Hn-HAU"/>
+                        <outlet property="currentSongPlaying" destination="KaY-uA-3fg" id="i0I-2q-Iim"/>
                         <outlet property="currentStationPlaying" destination="cQz-vw-ZML" id="Ntf-i9-DpI"/>
                     </connections>
                 </viewController>

@@ -370,6 +370,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 7CA85Z98PG;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					600FE6C21E705D41005D208B = {
 						CreatedOnToolsVersion = 8.2.1;

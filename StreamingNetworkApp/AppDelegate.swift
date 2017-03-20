@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         for name in UIFont.familyNames {
             print(name)
-            if let nameString = name as! String!
+            if let nameString = name as String!
             {
                 print(UIFont.fontNames(forFamilyName: nameString))
             }

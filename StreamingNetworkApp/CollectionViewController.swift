@@ -22,6 +22,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     var currentRadioStation: RadioData?
     
     
+    
     // Make a var imageView.
 //    var imageView = [RadioData].stationImage
     

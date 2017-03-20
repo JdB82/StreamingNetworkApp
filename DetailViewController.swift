@@ -18,14 +18,9 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var currentStationPlaying: UIImageView!
     
-    @IBOutlet weak var currentSongPlaying: UIImageView!
+    @IBOutlet weak var currentSongPlaying: UILabel?
     
-    @IBAction func showCurrentSong(_ sender: Any) {
-        let currentSongUrl = currentSongPlayings?.currentSong
-        let songUrl = NSURL(string: currentSongUrl!)
-        print("the Url = \(songUrl)")
-    }
-    
+    // Action button to play the StreamUrl.
     @IBAction func playButton(_ sender: Any) {
         let urlstring = theStationPlaying?.streamingUrl
         let url = NSURL(string: urlstring!)
@@ -34,26 +29,48 @@ class DetailViewController: UIViewController {
         play(url: url!)
     }
     
+    // Function to stop the stream playing.
+    func stopPlayer() {
+        if let play = player {
+            print("stopped")
+            play.pause()
+            player = nil
+            print("player deallocated")
+        } else {
+            print("player was already deallocated")
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Let the image url of FireBase get in to the detailView.
         if let radioStationUrlImage = theStationPlaying?.stationImage {
             let url = URL(string: radioStationUrlImage)
             self.currentStationPlaying.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "247logo"))
         }
         
+        // Let the current song display show below the image of radioStationUrlImage.
         if let currentSongPlayingUrl = currentSongPlayings?.currentSong {
             let url = URL(string: currentSongPlayingUrl)
-            self.currentSongPlaying.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "247logo"))
         }
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    // Function to get the url of the currentSong out of FireBase so we can display it in the detailView.
+    func showCurrentSong() {
+        let currentSongUrl = currentSongPlayings?.currentSong
+        let songUrl = NSURL(string: currentSongUrl!)
+        print("the Url = \(songUrl)")
     }
 
+    // Apple fixet func.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // Function that gets the streaming url play when pressing the playButton. 
     func play(url:NSURL) {
         print("playing \(url)")
         
