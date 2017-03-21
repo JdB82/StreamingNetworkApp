@@ -11,20 +11,27 @@ import Kingfisher
 import AVFoundation
 
 class DetailViewController: UIViewController {
-    
+
     var theStationPlaying: RadioData?
     var currentSongPlayings: RadioData?
     var player: AVPlayer?
+    var isPressed = false
+    
+
+
     
     @IBOutlet weak var currentStationPlaying: UIImageView!
-    
     @IBOutlet weak var currentSongPlaying: UILabel?
-    
+    @IBOutlet weak var playPauzeButton: UIButton!
+
     // Action button to play the StreamUrl.
     @IBAction func playButton(_ sender: Any) {
         let urlstring = theStationPlaying?.streamingUrl
         let url = NSURL(string: urlstring!)
         print("the url = \(url!)")
+        // image state
+        togglePlayPauze()
+        
         if let playerLocal = self.player {
             if playerLocal.isPlaying {
                 stopPlayer()
@@ -48,6 +55,8 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        togglePlayPauze()
         
         // Let the image url of FireBase get in to the detailView.
         if let radioStationUrlImage = theStationPlaying?.stationImage {
@@ -103,8 +112,24 @@ class DetailViewController: UIViewController {
         } catch {
             print("AVAudioPlayer init failed")
         }
+    }
+    
+    func togglePlayPauze() {
         
+        let playImage = UIImage(named: "Play.png")
+        let pauzeImage = UIImage(named: "Pause.png")
         
+        if isPressed {
+            playPauzeButton.setImage(pauzeImage, for: .normal)
+            print("is pressed")
+            isPressed = false
+        } else if !isPressed {
+            print("is depressed")
+        
+            playPauzeButton.setImage(playImage, for: .normal)
+//            togglePlayPauze(on: player)
+            isPressed = true
+        }
     }
     
 
