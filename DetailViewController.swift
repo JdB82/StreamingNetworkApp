@@ -25,8 +25,13 @@ class DetailViewController: UIViewController {
         let urlstring = theStationPlaying?.streamingUrl
         let url = NSURL(string: urlstring!)
         print("the url = \(url!)")
-        
-        play(url: url!)
+        if let playerLocal = self.player {
+            if playerLocal.isPlaying {
+                stopPlayer()
+            }
+        } else {
+            play(url: url!)
+        }
     }
     
     // Function to stop the stream playing.
@@ -75,6 +80,19 @@ class DetailViewController: UIViewController {
         print("playing \(url)")
         
         do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .mixWithOthers)
+            print("AVAudioSession Category Playback OK")
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+                print("AVAudioSession is Active")
+            } catch {
+                print(error)
+            }
+        } catch {
+            print(error)
+        }
+        
+        do {
             let playerItem = AVPlayerItem(url: url as URL)
             self.player = AVPlayer(playerItem:playerItem)
             player!.volume = 1.0
@@ -85,6 +103,7 @@ class DetailViewController: UIViewController {
         } catch {
             print("AVAudioPlayer init failed")
         }
+        
         
     }
     

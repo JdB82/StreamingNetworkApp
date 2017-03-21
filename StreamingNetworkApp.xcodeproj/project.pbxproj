@@ -23,6 +23,7 @@
 		604007A21E71ABB500B8035C /* StreamingNetworkAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604007991E71AAAE00B8035C /* StreamingNetworkAppTests.swift */; };
 		604007A41E71AF0D00B8035C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604007A31E71AF0D00B8035C /* DataProvider.swift */; };
 		604007AB1E71C06B00B8035C /* RadioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604007AA1E71C06B00B8035C /* RadioData.swift */; };
+		60E2BE741E803615001A3561 /* AvPlayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E2BE731E803615001A3561 /* AvPlayerExtension.swift */; };
 		60E38A2C1E782C0900A20807 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E38A2B1E782C0900A20807 /* MainNavigationController.swift */; };
 		60E38A2F1E78362300A20807 /* GlobalParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E38A2E1E78362300A20807 /* GlobalParams.swift */; };
 		60E38A301E783FEB00A20807 /* Fort Foundry - Termina-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 60E38A271E7800CC00A20807 /* Fort Foundry - Termina-Black.otf */; };
@@ -75,6 +76,7 @@
 		6040079C1E71AAAE00B8035C /* StreamingNetworkAppUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingNetworkAppUITests.swift; sourceTree = "<group>"; };
 		604007A31E71AF0D00B8035C /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = StreamingNetworkApp/DataProvider.swift; sourceTree = "<group>"; };
 		604007AA1E71C06B00B8035C /* RadioData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadioData.swift; path = StreamingNetworkApp/RadioData.swift; sourceTree = "<group>"; };
+		60E2BE731E803615001A3561 /* AvPlayerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvPlayerExtension.swift; sourceTree = "<group>"; };
 		60E38A261E7800BD00A20807 /* Fort Foundry - Termina-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Fort Foundry - Termina-Regular.otf"; path = "StreamingNetworkApp/Fort Foundry - Termina-Regular.otf"; sourceTree = "<group>"; };
 		60E38A271E7800CC00A20807 /* Fort Foundry - Termina-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Fort Foundry - Termina-Black.otf"; path = "StreamingNetworkApp/Fort Foundry - Termina-Black.otf"; sourceTree = "<group>"; };
 		60E38A2B1E782C0900A20807 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainNavigationController.swift; path = StreamingNetworkApp/MainNavigationController.swift; sourceTree = "<group>"; };
@@ -152,12 +154,14 @@
 			isa = PBXGroup;
 			children = (
 				600FE6B21E705D41005D208B /* AppDelegate.swift */,
+				60E38A2A1E7802E800A20807 /* Storyboards */,
 				602072F81E76DE9A001D5C33 /* Layout */,
 				602072FA1E76E457001D5C33 /* Cells */,
 				604007A51E71AF4100B8035C /* DataLayer */,
 				602072F71E76DE54001D5C33 /* Controllers */,
 				602073011E770254001D5C33 /* Constants */,
 				600370201E7164710095CE53 /* Supporting Files */,
+				60E2BE731E803615001A3561 /* AvPlayerExtension.swift */,
 			);
 			path = StreamingNetworkApp;
 			sourceTree = "<group>";
@@ -176,7 +180,6 @@
 		602072F81E76DE9A001D5C33 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				60E38A2A1E7802E800A20807 /* Storyboards */,
 				60E38A291E7800F400A20807 /* LaunchScreen */,
 				60E38A2D1E782C1100A20807 /* Navigation */,
 				60E38A281E7800D600A20807 /* Font */,
@@ -587,6 +590,7 @@
 				60E38A2C1E782C0900A20807 /* MainNavigationController.swift in Sources */,
 				600FE6B51E705D41005D208B /* CollectionViewController.swift in Sources */,
 				600FE6B31E705D41005D208B /* AppDelegate.swift in Sources */,
+				60E2BE741E803615001A3561 /* AvPlayerExtension.swift in Sources */,
 				600FE6E11E705D7C005D208B /* MyCollectionViewCell.swift in Sources */,
 				604007AB1E71C06B00B8035C /* RadioData.swift in Sources */,
 				604007A41E71AF0D00B8035C /* DataProvider.swift in Sources */,
