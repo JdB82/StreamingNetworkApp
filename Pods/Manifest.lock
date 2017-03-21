@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.4.0)
   - Firebase/Core (3.13.0):
     - FirebaseAnalytics (= 3.7.0)
     - FirebaseCore (= 3.5.0)
@@ -20,11 +21,13 @@ PODS:
   - Kingfisher (3.5.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.4)
   - Firebase/Core
   - Firebase/Database
   - Kingfisher (~> 3.5)
 
 SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Firebase: 5bc34d7b5ff5792e3386c8b28dc6265deeab0da4
   FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
   FirebaseCore: 1c0a13bf59bb95cdd19577252499f0ec6a03e999
@@ -33,6 +36,6 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
 
-PODFILE CHECKSUM: 553b0c5c5d9d4f86f481da67ed7e3a410347a392
+PODFILE CHECKSUM: 0c0da2f6aff272b709da4d1bf6ce5bd2a01d9096
 
 COCOAPODS: 1.2.0

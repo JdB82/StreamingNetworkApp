@@ -9,7 +9,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 
 import Foundation
- 
+ import Alamofire
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class RadioData {
@@ -75,5 +75,12 @@ public class RadioData {
         
 		return dictionary
 	}
+    
+    public func getCurrentSong() {
+        Alamofire.request(currentSong!).responseString(completionHandler: { (response) in
+            print(response)
+        })
+        
+    }
 
 }

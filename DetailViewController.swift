@@ -9,16 +9,15 @@
 import UIKit
 import Kingfisher
 import AVFoundation
+import Alamofire 
 
 class DetailViewController: UIViewController {
 
-    var theStationPlaying: RadioData?
-    var currentSongPlayings: RadioData?
-    var player: AVPlayer?
-    var isPressed = false
+    var theStationDataObject: RadioData?
     
 
-
+    var player: AVPlayer?
+    var isPressed = false
     
     @IBOutlet weak var currentStationPlaying: UIImageView!
     @IBOutlet weak var currentSongPlaying: UILabel?
@@ -26,7 +25,7 @@ class DetailViewController: UIViewController {
 
     // Action button to play the StreamUrl.
     @IBAction func playButton(_ sender: Any) {
-        let urlstring = theStationPlaying?.streamingUrl
+        let urlstring = theStationDataObject?.streamingUrl
         let url = NSURL(string: urlstring!)
         print("the url = \(url!)")
         // image state
@@ -37,7 +36,7 @@ class DetailViewController: UIViewController {
                 stopPlayer()
             }
         } else {
-            play(url: url!)
+//            play(url: url!)
         }
     }
     
@@ -52,6 +51,31 @@ class DetailViewController: UIViewController {
             print("player was already deallocated")
         }
     }
+    
+    // Toggle the play and pauze button on the detailView.
+    func togglePlayPauze() {
+        
+        let playImage = UIImage(named: "Play.png")
+        let pauzeImage = UIImage(named: "Pause.png")
+        
+        if isPressed {
+            playPauzeButton.setImage(pauzeImage, for: .normal)
+            print("is pressed")
+            isPressed = false
+        } else if !isPressed {
+            print("is depressed")
+            playPauzeButton.setImage(playImage, for: .normal)
+            isPressed = true
+        }
+    }
+
+    
+    // Function to get the url of the currentSong out of FireBase so we can display it in the detailView.
+    func showCurrentSong() {
+        let currentSongUrl = theStationDataObject?.currentSong
+        let songUrl = NSURL(string: currentSongUrl!)
+        print("the Url = \(songUrl)")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,27 +83,24 @@ class DetailViewController: UIViewController {
         togglePlayPauze()
         
         // Let the image url of FireBase get in to the detailView.
-        if let radioStationUrlImage = theStationPlaying?.stationImage {
+        if let radioStationUrlImage = theStationDataObject?.stationImage {
             let url = URL(string: radioStationUrlImage)
             self.currentStationPlaying.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "247logo"))
         }
         
         // Let the current song display show below the image of radioStationUrlImage.
-        if let currentSongPlayingUrl = currentSongPlayings?.currentSong {
-            let url = URL(string: currentSongPlayingUrl)
+        if let currentSongPlayingUrl = theStationDataObject?.currentSong {
+            //Alamofire you use for unwrapping a url and it give back the response in this case a artist and titel.
+            Alamofire.request(currentSongPlayingUrl).responseString(completionHandler: { (response) in
+                print(response.result.value as Any)
+                    if let songName = response.result.value {
+                        self.currentSongPlaying?.text = songName
+                }
+            })
         }
-        
-    }
     
-    // Function to get the url of the currentSong out of FireBase so we can display it in the detailView.
-    func showCurrentSong() {
-        let currentSongUrl = currentSongPlayings?.currentSong
-        let songUrl = NSURL(string: currentSongUrl!)
-        print("the Url = \(songUrl)")
-    }
-
     // Apple fixet func.
-    override func didReceiveMemoryWarning() {
+    func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -113,25 +134,6 @@ class DetailViewController: UIViewController {
             print("AVAudioPlayer init failed")
         }
     }
-    
-    func togglePlayPauze() {
-        
-        let playImage = UIImage(named: "Play.png")
-        let pauzeImage = UIImage(named: "Pause.png")
-        
-        if isPressed {
-            playPauzeButton.setImage(pauzeImage, for: .normal)
-            print("is pressed")
-            isPressed = false
-        } else if !isPressed {
-            print("is depressed")
-        
-            playPauzeButton.setImage(playImage, for: .normal)
-//            togglePlayPauze(on: player)
-            isPressed = true
-        }
-    }
-    
 
     /*
     // MARK: - Navigation
@@ -143,4 +145,5 @@ class DetailViewController: UIViewController {
     }
     */
 
+  }
 }

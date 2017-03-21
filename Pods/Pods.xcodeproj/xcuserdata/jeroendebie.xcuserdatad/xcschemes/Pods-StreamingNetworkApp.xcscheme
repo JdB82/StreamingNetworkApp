@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8377C1EA38E0F94106BCA89C6FA7486E"
+               BlueprintIdentifier = "4D5BA1F82521317017D614E619E1DA2E"
                BuildableName = "Pods_StreamingNetworkApp.framework"
                BlueprintName = "Pods-StreamingNetworkApp"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8377C1EA38E0F94106BCA89C6FA7486E"
+            BlueprintIdentifier = "4D5BA1F82521317017D614E619E1DA2E"
             BuildableName = "Pods_StreamingNetworkApp.framework"
             BlueprintName = "Pods-StreamingNetworkApp"
             ReferencedContainer = "container:Pods.xcodeproj">
