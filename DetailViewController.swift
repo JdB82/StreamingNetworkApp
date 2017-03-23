@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var currentStationPlaying: UIImageView!
     @IBOutlet weak var currentSongPlaying: UILabel?
     @IBOutlet weak var playPauzeButton: UIButton!
-
+    
     // Action button to play the StreamUrl.
     @IBAction func playButton(_ sender: Any) {
         let urlstring = theStationDataObject?.streamingUrl
@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
                 stopPlayer()
             }
         } else {
-//            play(url: url!)
+            play(url: url!)
         }
     }
     
@@ -69,12 +69,39 @@ class DetailViewController: UIViewController {
         }
     }
 
-    
     // Function to get the url of the currentSong out of FireBase so we can display it in the detailView.
     func showCurrentSong() {
-        let currentSongUrl = theStationDataObject?.currentSong
-        let songUrl = NSURL(string: currentSongUrl!)
-        print("the Url = \(songUrl)")
+        // Let the current song display show below the image of radioStationUrlImage.
+        if let currentSongPlayingUrl = theStationDataObject?.currentSong {
+            //Alamofire you use for unwrapping a url and it give back the response in this case a artist and titel.
+            Alamofire.request(currentSongPlayingUrl).responseString(completionHandler: { (response) in
+                print(response.result.value as Any)
+                if response.result.isSuccess {
+                    // Here you see a if condiction.
+                    if let songName = response.result.value {
+                        // If you find a value than display the text in the outlet currentSongPlaying.
+                        self.currentSongPlaying?.text = songName
+                    }
+                } else {
+                    // Create the alert controller
+                    let alert = UIAlertController(title: "Streaming error", message: "We are working on it", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(action:UIAlertAction!) in
+                        print("you have pressed the Cancel button")
+                    }))
+                    self.present(alert, animated: true, completion:nil)
+                }
+            })
+        }
+    }
+    
+    func displayRadioStationImage() {
+        
+        // Let the image url of FireBase get in to the detailView.
+        if let radioStationUrlImage = theStationDataObject?.stationImage {
+            let url = URL(string: radioStationUrlImage)
+            self.currentStationPlaying.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "247logo"))
+        }
+
     }
 
     override func viewDidLoad() {
@@ -82,25 +109,14 @@ class DetailViewController: UIViewController {
         
         togglePlayPauze()
         
-        // Let the image url of FireBase get in to the detailView.
-        if let radioStationUrlImage = theStationDataObject?.stationImage {
-            let url = URL(string: radioStationUrlImage)
-            self.currentStationPlaying.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "247logo"))
-        }
+        displayRadioStationImage()
         
-        // Let the current song display show below the image of radioStationUrlImage.
-        if let currentSongPlayingUrl = theStationDataObject?.currentSong {
-            //Alamofire you use for unwrapping a url and it give back the response in this case a artist and titel.
-            Alamofire.request(currentSongPlayingUrl).responseString(completionHandler: { (response) in
-                print(response.result.value as Any)
-                    if let songName = response.result.value {
-                        self.currentSongPlaying?.text = songName
-                }
-            })
-        }
+        showCurrentSong()
+        
+    }
     
     // Apple fixet func.
-    func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -134,16 +150,5 @@ class DetailViewController: UIViewController {
             print("AVAudioPlayer init failed")
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-  }
+    
 }
