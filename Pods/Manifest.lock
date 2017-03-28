@@ -15,6 +15,7 @@ PODS:
   - FirebaseDatabase (3.1.2):
     - FirebaseAnalytics (~> 3.7)
   - FirebaseInstanceID (1.0.9)
+  - Google-Mobile-Ads-SDK (7.19.0)
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.4)
   - Firebase/Core
   - Firebase/Database
+  - Google-Mobile-Ads-SDK
   - Kingfisher (~> 3.5)
 
 SPEC CHECKSUMS:
@@ -33,9 +35,10 @@ SPEC CHECKSUMS:
   FirebaseCore: 1c0a13bf59bb95cdd19577252499f0ec6a03e999
   FirebaseDatabase: 05c96d7b43a7368dc91c07791adb49683e1738d1
   FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
+  Google-Mobile-Ads-SDK: d1bcdbd8347a105a687345b8511701172a5074e9
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
 
-PODFILE CHECKSUM: 0c0da2f6aff272b709da4d1bf6ce5bd2a01d9096
+PODFILE CHECKSUM: dd51dd774adcc18e8916ac29e46f8691cf72fcfe
 
 COCOAPODS: 1.2.0

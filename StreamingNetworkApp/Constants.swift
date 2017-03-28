@@ -18,6 +18,8 @@ let collectionViewXib = "MyCollectionViewCell"
 
 let detailSeque = "detailSegue"
 
+let adMobID = "ca-app-pub-7305223671398373/7805115640"
+
 struct jsonKeys {
     static let streamingUrl = "streamingUrl"
     static let StationName = "StationName"

@@ -10,29 +10,35 @@
 import UIKit
 import Kingfisher
 import FirebaseDatabase
-
+import GoogleMobileAds
 
 // Implement the protocols I need.
-class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, GADBannerViewDelegate {
     
 
     // make a var of the nam radioStationData where I store the array [RadioData]
     var radioStationData: [RadioData] = []
+    
     // creating a property.
     var currentRadioStation: RadioData?
     
-    
-    
-    // Make a var imageView.
-//    var imageView = [RadioData].stationImage
+    // Constant for the Adbanner.
+    @IBOutlet weak var bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
     
     @IBOutlet weak var radioCollectionView: UICollectionView!
-    @IBOutlet weak var myLabel: UILabel!
-    
+
     // MARK: viewDidLoad.
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Delegate the BannerView.
+        bannerView?.delegate = self
+        bannerView?.adUnitID = adMobID
+        bannerView?.rootViewController = self
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        bannerView?.load(request)
         
         self.title = GlobalParams.main.title
         
@@ -51,6 +57,8 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    
+    
     func notifyObservers(notification: NSNotification) {
         var radioDictionary: Dictionary<String,[RadioData]> = notification.userInfo as! Dictionary<String,[RadioData]>
         radioStationData = radioDictionary[radioDictionaryKey]!
@@ -64,7 +72,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return radioStationData.count
         
-            }
+        }
     
     // make a cell for each cell index path
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -81,7 +89,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         cell.backgroundColor = UIColor.white
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 4
-        cell.layer.cornerRadius = 50
+        cell.layer.cornerRadius = 52
         
         return cell
     }
@@ -103,6 +111,44 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
 
             detailView.theStationDataObject = currentRadioStation
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.statusBarStyle = .default
+        
+    }
+    
+    // MARK: - GADBannerViewDelegate
+    // Called when an ad request loaded an ad.
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print(#function)
+    }
+    
+    // Called when an ad request failed.
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("\(#function): \(error.localizedDescription)")
+    }
+    
+    // Called just before presenting the user a full screen view, such as a browser, in response to
+    // clicking on an ad.
+    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+        print(#function)
+    }
+    
+    // Called just before dismissing a full screen view.
+    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+        print(#function)
+    }
+    
+    // Called just after dismissing a full screen view.
+    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+        print(#function)
+    }
+    
+    // Called just before the application will background or terminate because the user clicked on an
+    // ad that will launch another application (such as the App Store).
+    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+        print(#function)
     }
     
 }

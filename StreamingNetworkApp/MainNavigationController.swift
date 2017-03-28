@@ -10,9 +10,15 @@ import UIKit
 
 class MainNavigationController: UINavigationController {
 
+    //Changes the color off the navigationBar items.
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIApplication.shared.statusBarStyle = .lightContent
+
         customNavigationBar()
 
         // Do any additional setup after loading the view.
@@ -23,7 +29,6 @@ class MainNavigationController: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

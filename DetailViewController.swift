@@ -55,8 +55,8 @@ class DetailViewController: UIViewController {
     // Toggle the play and pauze button on the detailView.
     func togglePlayPauze() {
         
-        let playImage = UIImage(named: "Play.png")
-        let pauzeImage = UIImage(named: "Pause.png")
+        let playImage = UIImage(named: "PlayButton.png")
+        let pauzeImage = UIImage(named: "PauzeButton.png")
         
         if isPressed {
             playPauzeButton.setImage(pauzeImage, for: .normal)

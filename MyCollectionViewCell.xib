@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="288" height="176"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6C6B8D31-F544-4B3E-B9BB-86A25FC29952" translatesAutoresizingMaskIntoConstraints="NO" id="V2L-6b-k64">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="E411A6D6-2E22-42C0-A285-B3E51678EEB2" translatesAutoresizingMaskIntoConstraints="NO" id="V2L-6b-k64">
                         <rect key="frame" x="10" y="10" width="268" height="156"/>
                     </imageView>
                 </subviews>
@@ -38,7 +38,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="6C6B8D31-F544-4B3E-B9BB-86A25FC29952" width="1129" height="750">
+        <image name="E411A6D6-2E22-42C0-A285-B3E51678EEB2" width="1129" height="750">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

@@ -23,4 +23,5 @@ pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'Kingfisher', '~> 3.5'
 pod 'Alamofire', '~> 4.4'
+pod 'Google-Mobile-Ads-SDK'
 
