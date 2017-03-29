@@ -14,8 +14,7 @@ import Alamofire
 class DetailViewController: UIViewController {
 
     var theStationDataObject: RadioData?
-    
-
+    var timer = Timer()
     var player: AVPlayer?
     
     @IBOutlet weak var currentStationPlaying: UIImageView!
@@ -89,6 +88,8 @@ class DetailViewController: UIViewController {
                     self.present(alert, animated: true, completion:nil)
                 }
             })
+            
+
         }
     }
     
@@ -113,7 +114,8 @@ class DetailViewController: UIViewController {
         displayRadioStationImage()
         
         showCurrentSong()
-        
+        self.timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(showCurrentSong), userInfo: nil, repeats: true)
+
     }
     
     // Apple fixet func.
