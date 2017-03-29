@@ -57,8 +57,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    
-    
     func notifyObservers(notification: NSNotification) {
         var radioDictionary: Dictionary<String,[RadioData]> = notification.userInfo as! Dictionary<String,[RadioData]>
         radioStationData = radioDictionary[radioDictionaryKey]!

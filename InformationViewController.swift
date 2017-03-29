@@ -10,10 +10,16 @@ import UIKit
 
 class InformationViewController: UIViewController {
 
+    @IBOutlet weak var informationBackground: UITextView!
+    
+    @IBOutlet weak var informationViewBackhground: UIView!
+    
     @IBOutlet weak var returnButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+//        informationBackground.layer.cornerRadius = 10
 
         // Do any additional setup after loading the view.
     }
