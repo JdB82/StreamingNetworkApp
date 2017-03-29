@@ -17,7 +17,6 @@ class DetailViewController: UIViewController {
     
 
     var player: AVPlayer?
-    var isPressed = false
     
     @IBOutlet weak var currentStationPlaying: UIImageView!
     @IBOutlet weak var currentSongPlaying: UILabel?
@@ -28,8 +27,7 @@ class DetailViewController: UIViewController {
         let urlstring = theStationDataObject?.streamingUrl
         let url = NSURL(string: urlstring!)
         print("the url = \(url!)")
-        // image state
-        togglePlayPauze()
+
         
         if let playerLocal = self.player {
             if playerLocal.isPlaying {
@@ -43,8 +41,10 @@ class DetailViewController: UIViewController {
     // Function to stop the stream playing.
     func stopPlayer() {
         if let play = player {
+
             print("stopped")
             play.pause()
+            togglePlayPauze()
             player = nil
             print("player deallocated")
         } else {
@@ -58,14 +58,12 @@ class DetailViewController: UIViewController {
         let playImage = UIImage(named: "PlayButton.png")
         let pauzeImage = UIImage(named: "PauzeButton.png")
         
-        if isPressed {
+        if (self.player?.isPlaying)! {
             playPauzeButton.setImage(pauzeImage, for: .normal)
             print("is pressed")
-            isPressed = false
-        } else if !isPressed {
+        } else {
             print("is depressed")
             playPauzeButton.setImage(playImage, for: .normal)
-            isPressed = true
         }
     }
 
@@ -107,7 +105,10 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        togglePlayPauze()
+        if let streamUrl = theStationDataObject?.streamingUrl,
+            let streamNsUrl = NSURL.init(string: streamUrl) {
+            play(url: streamNsUrl)
+        }
         
         displayRadioStationImage()
         
@@ -143,6 +144,7 @@ class DetailViewController: UIViewController {
             self.player = AVPlayer(playerItem:playerItem)
             player!.volume = 1.0
             player!.play()
+            togglePlayPauze()
         } catch let error as NSError {
             self.player = nil
             print(error.localizedDescription)

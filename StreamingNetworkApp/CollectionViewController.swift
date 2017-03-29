@@ -108,7 +108,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == detailSeque {
             let detailView = segue.destination as! DetailViewController
-
             detailView.theStationDataObject = currentRadioStation
         }
     }
