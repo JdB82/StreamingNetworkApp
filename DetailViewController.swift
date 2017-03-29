@@ -10,12 +10,14 @@ import UIKit
 import Kingfisher
 import AVFoundation
 import Alamofire 
+import MediaPlayer
 
 class DetailViewController: UIViewController {
 
     var theStationDataObject: RadioData?
     var timer = Timer()
     var player: AVPlayer?
+    var currentSongName: String?
     
     @IBOutlet weak var currentStationPlaying: UIImageView!
     @IBOutlet weak var currentSongPlaying: UILabel?
@@ -23,10 +25,13 @@ class DetailViewController: UIViewController {
     
     // Action button to play the StreamUrl.
     @IBAction func playButton(_ sender: Any) {
+        playSong()
+    }
+    
+    func playSong() {
         let urlstring = theStationDataObject?.streamingUrl
         let url = NSURL(string: urlstring!)
         print("the url = \(url!)")
-
         
         if let playerLocal = self.player {
             if playerLocal.isPlaying {
@@ -76,6 +81,7 @@ class DetailViewController: UIViewController {
                 if response.result.isSuccess {
                     // Here you see a if condiction.
                     if let songName = response.result.value {
+                        self.currentSongName = songName
                         // If you find a value than display the text in the outlet currentSongPlaying.
                         self.currentSongPlaying?.text = songName
                     }
@@ -88,8 +94,6 @@ class DetailViewController: UIViewController {
                     self.present(alert, animated: true, completion:nil)
                 }
             })
-            
-
         }
     }
     
@@ -118,10 +122,15 @@ class DetailViewController: UIViewController {
 
     }
     
-    // Apple fixet func.
+    // Apple fixed func.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        // Invalidate a timer becose other wise the viewcontroller kept alive in memory!!!.
+        timer.invalidate()
     }
     
     // Function that gets the streaming url play when pressing the playButton. 
@@ -129,7 +138,8 @@ class DetailViewController: UIViewController {
         print("playing \(url)")
         
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .mixWithOthers)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            UIApplication.shared.beginReceivingRemoteControlEvents()
             print("AVAudioSession Category Playback OK")
             do {
                 try AVAudioSession.sharedInstance().setActive(true)
@@ -153,6 +163,36 @@ class DetailViewController: UIViewController {
         } catch {
             print("AVAudioPlayer init failed")
         }
+        if let song = currentSongName {
+            let lockScreenImage: UIImageView = UIImageView()
+            if let radioStationUrlImage = theStationDataObject?.stationImage {
+                let url = URL(string: radioStationUrlImage)
+                lockScreenImage.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "247logo"))
+                
+                let artworkProperty = MPMediaItemArtwork.init(boundsSize: (lockScreenImage.image?.size)!, requestHandler: { (size) -> UIImage in
+                    return lockScreenImage.image!
+                })
+                
+                MPNowPlayingInfoCenter.default().nowPlayingInfo = [MPMediaItemPropertyTitle : song,
+                                                                   MPMediaItemPropertyArtwork : artworkProperty,
+                                                                   MPNowPlayingInfoPropertyDefaultPlaybackRate : NSNumber(value: 1),
+                                                                   MPMediaItemPropertyPlaybackDuration : CMTimeGetSeconds((player!.currentItem?.asset.duration)!)]
+            }
+            
+
+
+        }
+
     }
     
+    override func remoteControlReceived(with event: UIEvent?) {
+        print(event!.type)
+        if event!.type == UIEventType.remoteControl {
+            if event?.subtype == UIEventSubtype.remoteControlPlay {
+                playSong()
+            } else if event?.subtype == UIEventSubtype.remoteControlPause {
+                player?.pause()
+            }
+        }
+    }
 }
