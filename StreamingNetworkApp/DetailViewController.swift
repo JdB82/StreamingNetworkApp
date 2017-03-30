@@ -32,14 +32,11 @@ class DetailViewController: UIViewController {
         
         displayRadioStationImage()
         
-        showCurrentSong()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-        showCurrentSong()
-        
-        self.timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(showCurrentSong), userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(showCurrentSong), userInfo: nil, repeats: true)
         
     }
     
@@ -52,6 +49,7 @@ class DetailViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         // Invalidate a timer becose other wise the viewcontroller kept alive in memory!!!.
         timer.invalidate()
+//        stopPlayer()
     }
     
     // Action button to play the StreamUrl.
@@ -69,12 +67,13 @@ class DetailViewController: UIViewController {
         if let playerLocal = self.player {
             if playerLocal.isPlaying {
                 player?.pause()
-                
+                togglePlayPauze()
             } else {
                 player?.play()
+                togglePlayPauze()
             }
         } else {
-            play(url: url!)
+            creatAvplayer(url: url!)
         }
     }
     
@@ -93,7 +92,7 @@ class DetailViewController: UIViewController {
     }
     
     // Function that gets the streaming url play when pressing the playButton.
-    func play(url:NSURL) {
+    func creatAvplayer(url:NSURL) {
         print("playing \(url)")
         
         setupLockScreenPlayer()
@@ -202,17 +201,17 @@ class DetailViewController: UIViewController {
             let lockScreenImage: UIImageView = UIImageView()
             if let radioStationUrlImage = theStationDataObject?.stationImage {
                 let url = URL(string: radioStationUrlImage)
-                lockScreenImage.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "247logo"))
-                
-                let artworkProperty = MPMediaItemArtwork.init(boundsSize: (lockScreenImage.image?.size)!, requestHandler: { (size) -> UIImage in
+                lockScreenImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil, completionHandler: { (stationPlaying, error, cache, url) in
+                    let artworkProperty = MPMediaItemArtwork.init(boundsSize: .init(width: 100, height: 100) ,requestHandler: { (size) -> UIImage in
+                        
+                        return lockScreenImage.image!
+                    })
                     
-                    return lockScreenImage.image!
+                    MPNowPlayingInfoCenter.default().nowPlayingInfo = [MPMediaItemPropertyTitle : song,
+                                                                       MPMediaItemPropertyArtwork : artworkProperty,
+                                                                       MPNowPlayingInfoPropertyDefaultPlaybackRate : NSNumber(value: 1),
+                                                                       MPMediaItemPropertyPlaybackDuration : CMTimeGetSeconds((self.player!.currentItem?.asset.duration)!)]
                 })
-                
-                MPNowPlayingInfoCenter.default().nowPlayingInfo = [MPMediaItemPropertyTitle : song,
-                                                                   MPMediaItemPropertyArtwork : artworkProperty,
-                                                                   MPNowPlayingInfoPropertyDefaultPlaybackRate : NSNumber(value: 1),
-                                                                   MPMediaItemPropertyPlaybackDuration : CMTimeGetSeconds((player!.currentItem?.asset.duration)!)]
             }
         }
     }

@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDl-4h-7oH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2781" y="875"/>
+            <point key="canvasLocation" x="2780" y="1099"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mje-MF-fgx">
@@ -230,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CFj-vI-Sa1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="961" y="875"/>
+            <point key="canvasLocation" x="962" y="1024"/>
         </scene>
         <!--Home-->
         <scene sceneID="oT5-vS-1fo">
@@ -266,40 +266,50 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DancePicure-1" translatesAutoresizingMaskIntoConstraints="NO" id="iLN-4X-kjy">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0mC-69-qfF">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mC-69-qfF">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1f-4x-Lnz">
+                                        <rect key="frame" x="340" y="26" width="54" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="3nm-4Z-1aU"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="JVb-fl-Zvj"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="bCA-DU-9nl"/>
+                                            <constraint firstAttribute="width" constant="54" id="pwS-AA-eHG"/>
+                                        </constraints>
+                                        <state key="normal" image="close-button-800px"/>
+                                        <connections>
+                                            <action selector="close:" destination="HXc-hs-Dgp" eventType="touchUpInside" id="aIH-Jn-b5Y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Z1f-4x-Lnz" firstAttribute="top" secondItem="0mC-69-qfF" secondAttribute="top" constant="26" id="BsJ-gQ-ZcR"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z1f-4x-Lnz" secondAttribute="trailing" constant="20" id="Ps8-8V-gmH"/>
+                                </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Settings" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ywE-lp-XqG">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Settings" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ywE-lp-XqG">
                                 <rect key="frame" x="0.0" y="12" width="375" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Termina-Black" family="Termina" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1f-4x-Lnz">
-                                <rect key="frame" x="369" y="20" width="38" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="3nm-4Z-1aU"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="JVb-fl-Zvj"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="bCA-DU-9nl"/>
-                                    <constraint firstAttribute="width" constant="38" id="pwS-AA-eHG"/>
-                                </constraints>
-                                <state key="normal" image="close-button-800px"/>
-                                <connections>
-                                    <action selector="close:" destination="HXc-hs-Dgp" eventType="touchUpInside" id="aIH-Jn-b5Y"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Z1f-4x-Lnz" firstAttribute="top" secondItem="uNF-Yj-X6h" secondAttribute="bottom" id="0Se-a1-VPb"/>
+                            <constraint firstItem="0mC-69-qfF" firstAttribute="top" secondItem="iLN-4X-kjy" secondAttribute="top" id="3YU-ph-pQL"/>
                             <constraint firstItem="iLN-4X-kjy" firstAttribute="leading" secondItem="aYM-uS-21Z" secondAttribute="leading" id="94I-d7-ox1"/>
+                            <constraint firstItem="0mC-69-qfF" firstAttribute="trailing" secondItem="iLN-4X-kjy" secondAttribute="trailing" id="GKh-YT-Wxh"/>
                             <constraint firstAttribute="trailing" secondItem="iLN-4X-kjy" secondAttribute="trailing" id="IG3-NZ-t7T"/>
-                            <constraint firstAttribute="trailing" secondItem="Z1f-4x-Lnz" secondAttribute="trailing" constant="7" id="WY8-h4-i2v"/>
+                            <constraint firstItem="0mC-69-qfF" firstAttribute="leading" secondItem="ywE-lp-XqG" secondAttribute="leading" id="NhE-FE-0E1"/>
+                            <constraint firstItem="ywE-lp-XqG" firstAttribute="top" secondItem="aYM-uS-21Z" secondAttribute="topMargin" constant="12" id="RsU-dD-SwR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ywE-lp-XqG" secondAttribute="trailing" constant="19" id="Sne-uL-ZKt"/>
+                            <constraint firstItem="0mC-69-qfF" firstAttribute="bottom" secondItem="GvC-5a-sEK" secondAttribute="top" id="ZmW-1J-9ZF"/>
                             <constraint firstItem="iLN-4X-kjy" firstAttribute="top" secondItem="uNF-Yj-X6h" secondAttribute="bottom" constant="-20" id="aAM-P3-S2p"/>
                             <constraint firstItem="GvC-5a-sEK" firstAttribute="top" secondItem="iLN-4X-kjy" secondAttribute="bottom" id="aNs-YY-hS3"/>
+                            <constraint firstItem="0mC-69-qfF" firstAttribute="leading" secondItem="iLN-4X-kjy" secondAttribute="leading" id="dxT-A5-ngf"/>
+                            <constraint firstItem="GvC-5a-sEK" firstAttribute="top" secondItem="ywE-lp-XqG" secondAttribute="bottom" constant="670" id="xEb-Fs-qxl"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -309,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZP-Sb-66j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3686.9565217391305" y="874.72826086956525"/>
+            <point key="canvasLocation" x="3676" y="1099"/>
         </scene>
         <!--Info-->
         <scene sceneID="L04-2m-Z5O">
@@ -357,8 +367,12 @@ And.. drop us a line and request a song: music@247streaming.network</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwU-3T-rAH">
-                                        <rect key="frame" x="319" y="33" width="72" height="72"/>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwU-3T-rAH">
+                                        <rect key="frame" x="339" y="33" width="52" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="I9g-lc-t7G"/>
+                                            <constraint firstAttribute="height" constant="53" id="ORL-JM-PZQ"/>
+                                        </constraints>
                                         <state key="normal" image="close-button-800px"/>
                                         <connections>
                                             <action selector="close:" destination="4he-d6-8SL" eventType="touchUpInside" id="0cQ-BF-04Q"/>
@@ -368,9 +382,10 @@ And.. drop us a line and request a song: music@247streaming.network</string>
                                 <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="aa9-W6-tQc" firstAttribute="leading" secondItem="4z6-AU-RTg" secondAttribute="leadingMargin" id="15m-oF-TCm"/>
+                                    <constraint firstAttribute="trailing" secondItem="dwU-3T-rAH" secondAttribute="trailing" constant="23" id="7ks-Af-9Vt"/>
                                     <constraint firstItem="aa9-W6-tQc" firstAttribute="centerY" secondItem="4z6-AU-RTg" secondAttribute="centerY" id="OmA-tD-33g"/>
-                                    <constraint firstItem="dwU-3T-rAH" firstAttribute="centerX" secondItem="4z6-AU-RTg" secondAttribute="centerX" id="P6T-b5-1Pc"/>
                                     <constraint firstItem="aa9-W6-tQc" firstAttribute="centerX" secondItem="4z6-AU-RTg" secondAttribute="centerX" id="XAV-aL-jWn"/>
+                                    <constraint firstItem="dwU-3T-rAH" firstAttribute="top" secondItem="4z6-AU-RTg" secondAttribute="top" constant="33" id="dQD-O3-4tu"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -392,7 +407,7 @@ And.. drop us a line and request a song: music@247streaming.network</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPH-o0-KrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1892.753623188406" y="874.72826086956525"/>
+            <point key="canvasLocation" x="1910" y="1099"/>
         </scene>
     </scenes>
     <resources>
