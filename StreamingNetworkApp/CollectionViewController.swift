@@ -26,6 +26,10 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
     
     @IBOutlet weak var radioCollectionView: UICollectionView!
+    
+    // collection flow
+    var itemsPerRow : CGFloat = 2
+    var sectionInsets = UIEdgeInsets()
 
     // MARK: viewDidLoad.
     
@@ -53,6 +57,8 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
                                                object: nil)
         
         DataProvider.sharedInstance.getRadioData()
+        
+        sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -151,5 +157,35 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
 }
 
 
+
+extension  CollectionViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //2
+        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
+
+        
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    
+    //3
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    // 4
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left*2
+    }
+    
+}
 
 

@@ -23,10 +23,43 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var currentSongPlaying: UILabel?
     @IBOutlet weak var playPauzeButton: UIButton!
     
+    // MARK: viewController life cycle funtions.
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        playSong()
+        
+        displayRadioStationImage()
+        
+        showCurrentSong()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        showCurrentSong()
+        
+        self.timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(showCurrentSong), userInfo: nil, repeats: true)
+        
+    }
+    
+    // Apple fixed func.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        // Invalidate a timer becose other wise the viewcontroller kept alive in memory!!!.
+        timer.invalidate()
+    }
+    
     // Action button to play the StreamUrl.
     @IBAction func playButton(_ sender: Any) {
         playSong()
     }
+    
+    // MARK: Code for the player functions.
     
     func playSong() {
         let urlstring = theStationDataObject?.streamingUrl
@@ -35,7 +68,10 @@ class DetailViewController: UIViewController {
         
         if let playerLocal = self.player {
             if playerLocal.isPlaying {
-                stopPlayer()
+                player?.pause()
+                
+            } else {
+                player?.play()
             }
         } else {
             play(url: url!)
@@ -56,6 +92,26 @@ class DetailViewController: UIViewController {
         }
     }
     
+    // Function that gets the streaming url play when pressing the playButton.
+    func play(url:NSURL) {
+        print("playing \(url)")
+        
+        setupLockScreenPlayer()
+        
+        do {
+            let playerItem = AVPlayerItem(url: url as URL)
+            self.player = AVPlayer(playerItem:playerItem)
+            player!.volume = 1.0
+            player!.play()
+            togglePlayPauze()
+        } catch let error as NSError {
+            self.player = nil
+            print(error.localizedDescription)
+        } catch {
+            print("AVAudioPlayer init failed")
+        }
+    }
+
     // Toggle the play and pauze button on the detailView.
     func togglePlayPauze() {
         
@@ -71,6 +127,8 @@ class DetailViewController: UIViewController {
         }
     }
 
+    // MARK: set currentSong and stationImage.
+    
     // Function to get the url of the currentSong out of FireBase so we can display it in the detailView.
     func showCurrentSong() {
         // Let the current song display show below the image of radioStationUrlImage.
@@ -93,6 +151,8 @@ class DetailViewController: UIViewController {
                     }))
                     self.present(alert, animated: true, completion:nil)
                 }
+                
+                self.setMetaData()
             })
         }
     }
@@ -106,39 +166,13 @@ class DetailViewController: UIViewController {
         }
 
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if let streamUrl = theStationDataObject?.streamingUrl,
-            let streamNsUrl = NSURL.init(string: streamUrl) {
-            play(url: streamNsUrl)
-        }
-        
-        displayRadioStationImage()
-        
-        showCurrentSong()
-        self.timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(showCurrentSong), userInfo: nil, repeats: true)
-
-    }
     
-    // Apple fixed func.
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    // MARK: lockScreen functions.
     
-    override func viewDidDisappear(_ animated: Bool) {
-        // Invalidate a timer becose other wise the viewcontroller kept alive in memory!!!.
-        timer.invalidate()
-    }
-    
-    // Function that gets the streaming url play when pressing the playButton. 
-    func play(url:NSURL) {
-        print("playing \(url)")
-        
+    func setupLockScreenPlayer() {
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            //sets class up to listen for lockscreen / remoteControlReceived.
             UIApplication.shared.beginReceivingRemoteControlEvents()
             print("AVAudioSession Category Playback OK")
             do {
@@ -150,39 +184,6 @@ class DetailViewController: UIViewController {
         } catch {
             print(error)
         }
-        
-        do {
-            let playerItem = AVPlayerItem(url: url as URL)
-            self.player = AVPlayer(playerItem:playerItem)
-            player!.volume = 1.0
-            player!.play()
-            togglePlayPauze()
-        } catch let error as NSError {
-            self.player = nil
-            print(error.localizedDescription)
-        } catch {
-            print("AVAudioPlayer init failed")
-        }
-        if let song = currentSongName {
-            let lockScreenImage: UIImageView = UIImageView()
-            if let radioStationUrlImage = theStationDataObject?.stationImage {
-                let url = URL(string: radioStationUrlImage)
-                lockScreenImage.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "247logo"))
-                
-                let artworkProperty = MPMediaItemArtwork.init(boundsSize: (lockScreenImage.image?.size)!, requestHandler: { (size) -> UIImage in
-                    return lockScreenImage.image!
-                })
-                
-                MPNowPlayingInfoCenter.default().nowPlayingInfo = [MPMediaItemPropertyTitle : song,
-                                                                   MPMediaItemPropertyArtwork : artworkProperty,
-                                                                   MPNowPlayingInfoPropertyDefaultPlaybackRate : NSNumber(value: 1),
-                                                                   MPMediaItemPropertyPlaybackDuration : CMTimeGetSeconds((player!.currentItem?.asset.duration)!)]
-            }
-            
-
-
-        }
-
     }
     
     override func remoteControlReceived(with event: UIEvent?) {
@@ -195,4 +196,27 @@ class DetailViewController: UIViewController {
             }
         }
     }
+    
+    func setMetaData() {
+        if let song = currentSongName {
+            let lockScreenImage: UIImageView = UIImageView()
+            if let radioStationUrlImage = theStationDataObject?.stationImage {
+                let url = URL(string: radioStationUrlImage)
+                lockScreenImage.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "247logo"))
+                
+                let artworkProperty = MPMediaItemArtwork.init(boundsSize: (lockScreenImage.image?.size)!, requestHandler: { (size) -> UIImage in
+                    
+                    return lockScreenImage.image!
+                })
+                
+                MPNowPlayingInfoCenter.default().nowPlayingInfo = [MPMediaItemPropertyTitle : song,
+                                                                   MPMediaItemPropertyArtwork : artworkProperty,
+                                                                   MPNowPlayingInfoPropertyDefaultPlaybackRate : NSNumber(value: 1),
+                                                                   MPMediaItemPropertyPlaybackDuration : CMTimeGetSeconds((player!.currentItem?.asset.duration)!)]
+            }
+        }
+    }
+    
 }
+
+

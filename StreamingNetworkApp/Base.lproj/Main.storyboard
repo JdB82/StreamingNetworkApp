@@ -223,7 +223,7 @@
                             <constraint firstItem="YLH-9W-LLF" firstAttribute="top" secondItem="BZs-LY-a5p" secondAttribute="bottom" constant="25" id="DDN-1G-hSN"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="247 News" id="dRG-Ou-LbG"/>
+                    <tabBarItem key="tabBarItem" title="247 News" image="Google News-50" id="dRG-Ou-LbG"/>
                     <connections>
                         <outlet property="newsOutlet" destination="YLH-9W-LLF" id="AOK-wW-z0a"/>
                     </connections>
@@ -336,22 +336,11 @@
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="4z6-AU-RTg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwU-3T-rAH">
-                                        <rect key="frame" x="352" y="29" width="38" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="38" id="6Eu-Hw-v2t"/>
-                                            <constraint firstAttribute="height" constant="38" id="BbP-CY-BB5"/>
-                                        </constraints>
-                                        <state key="normal" image="close-button-800px"/>
-                                        <connections>
-                                            <action selector="close:" destination="4he-d6-8SL" eventType="touchUpInside" id="0cQ-BF-04Q"/>
-                                        </connections>
-                                    </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aa9-W6-tQc">
-                                        <rect key="frame" x="8" y="125" width="398" height="400"/>
+                                        <rect key="frame" x="8" y="168" width="398" height="400"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="400" id="t7P-38-N0e"/>
+                                            <constraint firstAttribute="height" constant="400" id="eLv-6E-4Yq"/>
                                         </constraints>
                                         <string key="text">WELCOME TO THE                                              247STREAMING.NETWORK
 
@@ -368,14 +357,20 @@ And.. drop us a line and request a song: music@247streaming.network</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwU-3T-rAH">
+                                        <rect key="frame" x="319" y="33" width="72" height="72"/>
+                                        <state key="normal" image="close-button-800px"/>
+                                        <connections>
+                                            <action selector="close:" destination="4he-d6-8SL" eventType="touchUpInside" id="0cQ-BF-04Q"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="dwU-3T-rAH" firstAttribute="top" secondItem="4z6-AU-RTg" secondAttribute="top" constant="29" id="6ow-yl-L6e"/>
-                                    <constraint firstAttribute="trailing" secondItem="dwU-3T-rAH" secondAttribute="trailing" constant="24" id="Wd1-Rg-WDd"/>
-                                    <constraint firstAttribute="trailing" secondItem="aa9-W6-tQc" secondAttribute="trailing" constant="8" id="b8n-nH-90a"/>
-                                    <constraint firstItem="aa9-W6-tQc" firstAttribute="leading" secondItem="4z6-AU-RTg" secondAttribute="leading" constant="8" id="bvF-m2-kzE"/>
-                                    <constraint firstItem="aa9-W6-tQc" firstAttribute="top" secondItem="4z6-AU-RTg" secondAttribute="top" constant="125" id="el4-Mg-Sc9"/>
+                                    <constraint firstItem="aa9-W6-tQc" firstAttribute="leading" secondItem="4z6-AU-RTg" secondAttribute="leadingMargin" id="15m-oF-TCm"/>
+                                    <constraint firstItem="aa9-W6-tQc" firstAttribute="centerY" secondItem="4z6-AU-RTg" secondAttribute="centerY" id="OmA-tD-33g"/>
+                                    <constraint firstItem="dwU-3T-rAH" firstAttribute="centerX" secondItem="4z6-AU-RTg" secondAttribute="centerX" id="P6T-b5-1Pc"/>
+                                    <constraint firstItem="aa9-W6-tQc" firstAttribute="centerX" secondItem="4z6-AU-RTg" secondAttribute="centerX" id="XAV-aL-jWn"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -402,6 +397,7 @@ And.. drop us a line and request a song: music@247streaming.network</string>
     </scenes>
     <resources>
         <image name="DancePicure-1" width="1334" height="784"/>
+        <image name="Google News-50" width="50" height="50"/>
         <image name="NewYork" width="750" height="1334"/>
         <image name="Play" width="128" height="128"/>
         <image name="SpeakerWhitCone" width="392" height="604"/>

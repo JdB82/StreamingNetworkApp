@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		600370231E71663B0095CE53 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600370221E71663B0095CE53 /* DetailViewController.swift */; };
-		6003702D1E716AA60095CE53 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6003702C1E716AA60095CE53 /* SettingsViewController.swift */; };
 		6003702F1E716AE60095CE53 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6003702E1E716AE60095CE53 /* InformationViewController.swift */; };
 		6003703A1E719BBA0095CE53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 600370391E719BBA0095CE53 /* GoogleService-Info.plist */; };
 		600FE6B31E705D41005D208B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600FE6B21E705D41005D208B /* AppDelegate.swift */; };
@@ -25,6 +23,8 @@
 		604007A41E71AF0D00B8035C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604007A31E71AF0D00B8035C /* DataProvider.swift */; };
 		604007AB1E71C06B00B8035C /* RadioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604007AA1E71C06B00B8035C /* RadioData.swift */; };
 		606BF4121E89697C00C53679 /* newsFeedVievController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606BF4111E89697C00C53679 /* newsFeedVievController.swift */; };
+		60D835611E8D32F1004F1D84 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D835601E8D32F1004F1D84 /* SettingsViewController.swift */; };
+		60D835631E8D3340004F1D84 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D835621E8D3340004F1D84 /* DetailViewController.swift */; };
 		60E2BE741E803615001A3561 /* AvPlayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E2BE731E803615001A3561 /* AvPlayerExtension.swift */; };
 		60E38A2C1E782C0900A20807 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E38A2B1E782C0900A20807 /* MainNavigationController.swift */; };
 		60E38A2F1E78362300A20807 /* GlobalParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E38A2E1E78362300A20807 /* GlobalParams.swift */; };
@@ -56,8 +56,6 @@
 		1B389178D7FB2C98C40F31F2 /* Pods-StreamingNetworkAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkAppTests/Pods-StreamingNetworkAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		41944E92FFF745E02BE8F04D /* Pods_StreamingNetworkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamingNetworkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C124749A7DD198C1A89761 /* Pods-StreamingNetworkAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkAppUITests/Pods-StreamingNetworkAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		600370221E71663B0095CE53 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
-		6003702C1E716AA60095CE53 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../SettingsViewController.swift; sourceTree = "<group>"; };
 		6003702E1E716AE60095CE53 /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InformationViewController.swift; path = ../InformationViewController.swift; sourceTree = "<group>"; };
 		600370391E719BBA0095CE53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "StreamingNetworkApp/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		600FE6AF1E705D41005D208B /* StreamingNetworkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamingNetworkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +78,8 @@
 		604007A31E71AF0D00B8035C /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = StreamingNetworkApp/DataProvider.swift; sourceTree = "<group>"; };
 		604007AA1E71C06B00B8035C /* RadioData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadioData.swift; path = StreamingNetworkApp/RadioData.swift; sourceTree = "<group>"; };
 		606BF4111E89697C00C53679 /* newsFeedVievController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsFeedVievController.swift; sourceTree = "<group>"; };
+		60D835601E8D32F1004F1D84 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		60D835621E8D3340004F1D84 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		60E2BE731E803615001A3561 /* AvPlayerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvPlayerExtension.swift; path = StreamingNetworkApp/AvPlayerExtension.swift; sourceTree = "<group>"; };
 		60E38A261E7800BD00A20807 /* Fort Foundry - Termina-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Fort Foundry - Termina-Regular.otf"; path = "StreamingNetworkApp/Fort Foundry - Termina-Regular.otf"; sourceTree = "<group>"; };
 		60E38A271E7800CC00A20807 /* Fort Foundry - Termina-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Fort Foundry - Termina-Black.otf"; path = "StreamingNetworkApp/Fort Foundry - Termina-Black.otf"; sourceTree = "<group>"; };
@@ -186,8 +186,8 @@
 				600FE6B41E705D41005D208B /* CollectionViewController.swift */,
 				606BF4111E89697C00C53679 /* newsFeedVievController.swift */,
 				6003702E1E716AE60095CE53 /* InformationViewController.swift */,
-				6003702C1E716AA60095CE53 /* SettingsViewController.swift */,
-				600370221E71663B0095CE53 /* DetailViewController.swift */,
+				60D835601E8D32F1004F1D84 /* SettingsViewController.swift */,
+				60D835621E8D3340004F1D84 /* DetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -610,10 +610,10 @@
 				606BF4121E89697C00C53679 /* newsFeedVievController.swift in Sources */,
 				604007AB1E71C06B00B8035C /* RadioData.swift in Sources */,
 				604007A41E71AF0D00B8035C /* DataProvider.swift in Sources */,
+				60D835611E8D32F1004F1D84 /* SettingsViewController.swift in Sources */,
 				601482731E8BC70F009624F2 /* UIViewExtensions.swift in Sources */,
-				6003702D1E716AA60095CE53 /* SettingsViewController.swift in Sources */,
 				60E38A2F1E78362300A20807 /* GlobalParams.swift in Sources */,
-				600370231E71663B0095CE53 /* DetailViewController.swift in Sources */,
+				60D835631E8D3340004F1D84 /* DetailViewController.swift in Sources */,
 				6003702F1E716AE60095CE53 /* InformationViewController.swift in Sources */,
 				602072FE1E76FF81001D5C33 /* Constants.swift in Sources */,
 			);
