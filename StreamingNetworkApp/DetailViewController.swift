@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        self.timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(showCurrentSong), userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 6.0, target: self, selector: #selector(showCurrentSong), userInfo: nil, repeats: true)
         
     }
     
