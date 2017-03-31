@@ -15,7 +15,6 @@ import GoogleMobileAds
 // Implement the protocols I need.
 class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, GADBannerViewDelegate {
     
-
     // make a var of the nam radioStationData where I store the array [RadioData]
     var radioStationData: [RadioData] = []
     
@@ -90,6 +89,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
             let url = URL(string: radioStationImage)
             cell.stationImages.kf.setImage(with: url)
         }
+        
         cell.backgroundColor = UIColor.white
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 4
