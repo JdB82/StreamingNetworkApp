@@ -59,7 +59,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func notifyObservers(notification: NSNotification) {
@@ -74,8 +73,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     // tell the collection view how many cells to make.
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return radioStationData.count
-        
-        }
+    }
     
     // make a cell for each cell index path
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

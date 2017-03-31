@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,20 +18,22 @@
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="qCl-jm-PXP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vinyl-record" translatesAutoresizingMaskIntoConstraints="NO" id="2Ba-lI-Qgn">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rwg-dn-AGj">
+                                <rect key="frame" x="29" y="167" width="316" height="332"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="316" id="a44-20-aBZ"/>
+                                    <constraint firstAttribute="height" constant="332" id="xzr-iL-1Ll"/>
+                                </constraints>
                             </imageView>
                         </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2Ba-lI-Qgn" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="G1t-ss-6Gc"/>
-                            <constraint firstItem="2Ba-lI-Qgn" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="LLS-pB-o83"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="2Ba-lI-Qgn" secondAttribute="bottom" id="a1r-xu-Glr"/>
-                            <constraint firstAttribute="trailing" secondItem="2Ba-lI-Qgn" secondAttribute="trailing" id="tWJ-Nn-y5i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rwg-dn-AGj" secondAttribute="trailing" constant="14" id="Ng3-cI-VZI"/>
+                            <constraint firstItem="Rwg-dn-AGj" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="147" id="ic9-Ez-rDv"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -40,6 +43,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Vinyl-record" width="1024" height="768"/>
+        <image name="SplashScreen3.png" width="1024" height="768"/>
     </resources>
 </document>
