@@ -154,9 +154,8 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         print(#function)
     }
     
+    
 }
-
-
 
 extension  CollectionViewController: UICollectionViewDelegateFlowLayout {
     

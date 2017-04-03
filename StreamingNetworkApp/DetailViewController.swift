@@ -19,6 +19,7 @@ class DetailViewController: UIViewController {
     var player: AVPlayer?
     var currentSongName: String?
     
+    
     @IBOutlet weak var currentStationPlaying: UIImageView!
     @IBOutlet weak var currentSongPlaying: UILabel?
     @IBOutlet weak var playPauzeButton: UIButton!
@@ -30,13 +31,18 @@ class DetailViewController: UIViewController {
         
         playSong()
         
+        showCurrentSong()
+        
         displayRadioStationImage()
         
+        let sharingButton = UIBarButtonItem.init(barButtonSystemItem: .action, target: self, action: #selector(DetailViewController.shareCurrentStationPlaying(_:)))
+        self.navigationItem.rightBarButtonItem = sharingButton
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-        self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(showCurrentSong), userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(showCurrentSong), userInfo: nil, repeats: true)
         
     }
     
@@ -47,9 +53,11 @@ class DetailViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        
         // Invalidate a timer becose other wise the viewcontroller kept alive in memory!!!.
+        
         timer.invalidate()
-//        stopPlayer()
+    
     }
     
     // Action button to play the StreamUrl.
@@ -216,6 +224,38 @@ class DetailViewController: UIViewController {
         }
     }
     
+
+    // Sharing button on deatailView and functionality.
+    
+    func shareCurrentStationPlaying(_ sender: UIBarButtonItem) {
+            let title: String = (theStationDataObject?.stationName)!
+            let textToShare = "Join me and listen to \(title)!"
+        
+                if let myWebsite = NSURL(string: "http://www.247streaming.network") {
+
+                    let objectsToShare = [textToShare, myWebsite] as [Any]
+                    let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                    
+                    activityVC.popoverPresentationController?.sourceView = sender.customView
+                    self.present(activityVC, animated: true, completion: nil)
+                        
+            }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+            
+            let activityViewController = UIActivityViewController(activityItems: [title as Any, description, image], applicationActivities: nil)
+                                         activityViewController.excludedActivityTypes = [UIActivityType.assignToContact]
+                                         activityViewController.completionWithItemsHandler = {
+                                         (activityType, completed, returnedItems, activityError) in
+                                         self.dismiss(animated: true, completion: nil)
+            }
+        
+            picker.present(activityViewController, animated: true)
+        
+        }
+        
 }
 
 
