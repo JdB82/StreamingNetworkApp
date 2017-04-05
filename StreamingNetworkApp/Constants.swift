@@ -29,3 +29,7 @@ struct jsonKeys {
     
 }
 
+struct userDefaultKeys{
+    static let wifiCheck = "wificheck"
+}
+
