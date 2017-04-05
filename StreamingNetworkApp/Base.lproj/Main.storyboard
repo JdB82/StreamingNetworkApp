@@ -85,15 +85,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Kl-ew-zzj">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="RYe-nc-C6w">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="HXc-hs-Dgp" kind="popoverPresentation" popoverAnchorBarButtonItem="RYe-nc-C6w" id="9XB-My-gQQ">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Info" id="vKL-bP-PGA">
+                        <barButtonItem key="rightBarButtonItem" image="Image" style="plain" id="vKL-bP-PGA">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="4he-d6-8SL" kind="presentation" id="rMS-o0-m6U"/>
@@ -107,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3538" y="38"/>
+            <point key="canvasLocation" x="2851" y="38"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="gfc-aI-jhk">
@@ -142,7 +134,7 @@
                                     <constraint firstAttribute="width" constant="62" id="ReN-0r-Bo1"/>
                                     <constraint firstAttribute="height" constant="55" id="bF6-Uh-11f"/>
                                 </constraints>
-                                <state key="normal" title="Play Button" image="Play"/>
+                                <state key="normal" image="Play"/>
                                 <connections>
                                     <action selector="playButton:" destination="CSG-zk-jYT" eventType="touchUpInside" id="8L9-rR-Hxu"/>
                                 </connections>
@@ -176,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDl-4h-7oH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3538" y="817"/>
+            <point key="canvasLocation" x="2887" y="817"/>
         </scene>
         <!--My Tab Bar Controller-->
         <scene sceneID="mje-MF-fgx">
@@ -263,7 +255,7 @@
         <scene sceneID="oT5-vS-1fo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TAk-eN-OtC" customClass="MainNavigationController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="music-7" id="p37-zY-KX4"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home1" id="p37-zY-KX4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="crZ-sW-dHv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -278,65 +270,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84I-is-309" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1949" y="38"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="qeL-yr-12h">
-            <objects>
-                <viewController id="HXc-hs-Dgp" customClass="SettingsViewController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uNF-Yj-X6h"/>
-                        <viewControllerLayoutGuide type="bottom" id="GvC-5a-sEK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aYM-uS-21Z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DancePicure-1" translatesAutoresizingMaskIntoConstraints="NO" id="iLN-4X-kjy">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mC-69-qfF">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1f-4x-Lnz">
-                                        <rect key="frame" x="366" y="26" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="3nm-4Z-1aU"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="JVb-fl-Zvj"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="bCA-DU-9nl"/>
-                                            <constraint firstAttribute="width" constant="40" id="pwS-AA-eHG"/>
-                                        </constraints>
-                                        <state key="normal" image="close-button-800px"/>
-                                        <connections>
-                                            <action selector="close:" destination="HXc-hs-Dgp" eventType="touchUpInside" id="aIH-Jn-b5Y"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="Z1f-4x-Lnz" firstAttribute="top" secondItem="0mC-69-qfF" secondAttribute="top" constant="26" id="BsJ-gQ-ZcR"/>
-                                    <constraint firstAttribute="trailing" secondItem="Z1f-4x-Lnz" secondAttribute="trailing" constant="8" id="Ps8-8V-gmH"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="0mC-69-qfF" firstAttribute="top" secondItem="iLN-4X-kjy" secondAttribute="top" id="3YU-ph-pQL"/>
-                            <constraint firstItem="iLN-4X-kjy" firstAttribute="leading" secondItem="aYM-uS-21Z" secondAttribute="leading" id="94I-d7-ox1"/>
-                            <constraint firstItem="0mC-69-qfF" firstAttribute="trailing" secondItem="iLN-4X-kjy" secondAttribute="trailing" id="GKh-YT-Wxh"/>
-                            <constraint firstAttribute="trailing" secondItem="iLN-4X-kjy" secondAttribute="trailing" id="IG3-NZ-t7T"/>
-                            <constraint firstItem="0mC-69-qfF" firstAttribute="bottom" secondItem="GvC-5a-sEK" secondAttribute="top" id="ZmW-1J-9ZF"/>
-                            <constraint firstItem="iLN-4X-kjy" firstAttribute="top" secondItem="uNF-Yj-X6h" secondAttribute="bottom" constant="-20" id="aAM-P3-S2p"/>
-                            <constraint firstItem="GvC-5a-sEK" firstAttribute="top" secondItem="iLN-4X-kjy" secondAttribute="bottom" id="aNs-YY-hS3"/>
-                            <constraint firstItem="0mC-69-qfF" firstAttribute="leading" secondItem="iLN-4X-kjy" secondAttribute="leading" id="dxT-A5-ngf"/>
-                        </constraints>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear-7" id="ygs-5V-eBb"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kZP-Sb-66j" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4329" y="817"/>
         </scene>
         <!--Info-->
         <scene sceneID="L04-2m-Z5O">
@@ -424,13 +357,13 @@ And.. drop us a line and request a song: music@247streaming.network</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPH-o0-KrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2735" y="817"/>
+            <point key="canvasLocation" x="1948" y="817"/>
         </scene>
         <!--247 Streaming FaceBook-->
         <scene sceneID="tGA-x1-WkC">
             <objects>
                 <navigationController title="247 Streaming FaceBook" automaticallyAdjustsScrollViewInsets="NO" id="BOs-Jx-Xj0" customClass="MainNavigationController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="247 News" image="Google News-50" id="dRG-Ou-LbG"/>
+                    <tabBarItem key="tabBarItem" title="247 News" image="News1" id="dRG-Ou-LbG"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -454,16 +387,15 @@ And.. drop us a line and request a song: music@247streaming.network</string>
         </scene>
     </scenes>
     <resources>
-        <image name="DancePicure-1" width="1334" height="784"/>
-        <image name="Google News-50" width="50" height="50"/>
+        <image name="Home1" width="25" height="25"/>
+        <image name="Image" width="66" height="66"/>
         <image name="NewYork" width="750" height="1334"/>
+        <image name="News1" width="25" height="25"/>
         <image name="Play" width="128" height="128"/>
         <image name="SpeakerWhitCone" width="392" height="604"/>
         <image name="close-button-800px" width="533" height="536"/>
-        <image name="gear-7" width="30" height="30"/>
         <image name="girl-technology-music" width="750" height="1334"/>
         <image name="logo-247spice" width="800" height="800"/>
-        <image name="music-7" width="30" height="30"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
