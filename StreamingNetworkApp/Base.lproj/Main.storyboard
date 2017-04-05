@@ -72,7 +72,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eHG-eF-NQg" firstAttribute="leading" secondItem="ZLr-Xn-raS" secondAttribute="leading" id="Cny-L4-uuU"/>
@@ -87,7 +86,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="3Kl-ew-zzj">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="RYe-nc-C6w">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="HXc-hs-Dgp" kind="popoverPresentation" popoverAnchorBarButtonItem="RYe-nc-C6w" id="9XB-My-gQQ">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -108,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3261" y="38"/>
+            <point key="canvasLocation" x="3538" y="38"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="gfc-aI-jhk">
@@ -177,12 +176,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDl-4h-7oH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3261" y="1024"/>
+            <point key="canvasLocation" x="3538" y="817"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--My Tab Bar Controller-->
         <scene sceneID="mje-MF-fgx">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lC5-Ac-YG5" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lC5-Ac-YG5" customClass="MyTabBarController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ZyK-oh-903">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -191,14 +190,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="TAk-eN-OtC" kind="relationship" relationship="viewControllers" id="WdW-K0-Lz1"/>
-                        <segue destination="h2X-Ej-Wk1" kind="relationship" relationship="viewControllers" id="VUV-j9-hpT"/>
+                        <segue destination="BOs-Jx-Xj0" kind="relationship" relationship="viewControllers" id="VUV-j9-hpT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02c-IC-fMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="38"/>
+            <point key="canvasLocation" x="1070" y="38"/>
         </scene>
-        <!--247 News-->
+        <!--News Feed Viev Controller-->
         <scene sceneID="KRd-uB-I3V">
             <objects>
                 <viewController id="h2X-Ej-Wk1" customClass="newsFeedVievController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -210,29 +209,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleAspectFit" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YLH-9W-LLF">
-                                <rect key="frame" x="0.0" y="45" width="378" height="617"/>
+                            <webView contentMode="scaleAspectFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YLH-9W-LLF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="378" id="i1q-ww-FkZ"/>
-                                    <constraint firstAttribute="height" constant="617" id="rcF-BS-ciN"/>
-                                </constraints>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YLH-9W-LLF" firstAttribute="leading" secondItem="PZV-3c-w2X" secondAttribute="leading" id="D4g-YS-Zec"/>
-                            <constraint firstItem="YLH-9W-LLF" firstAttribute="top" secondItem="BZs-LY-a5p" secondAttribute="bottom" constant="25" id="DDN-1G-hSN"/>
+                            <constraint firstItem="YLH-9W-LLF" firstAttribute="leading" secondItem="PZV-3c-w2X" secondAttribute="leading" id="Gwp-A9-m4x"/>
+                            <constraint firstAttribute="trailing" secondItem="YLH-9W-LLF" secondAttribute="trailing" id="R9r-XH-2wB"/>
+                            <constraint firstItem="YLH-9W-LLF" firstAttribute="top" secondItem="PZV-3c-w2X" secondAttribute="top" id="XIi-nv-DOj"/>
+                            <constraint firstAttribute="bottom" secondItem="YLH-9W-LLF" secondAttribute="bottom" id="Ygc-qR-qtd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="247 News" image="Google News-50" id="dRG-Ou-LbG"/>
+                    <navigationItem key="navigationItem" id="uyW-2t-83v">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="V9m-5k-Fui">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backBtn:" destination="h2X-Ej-Wk1" id="UFu-Q6-Xie"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Forward" id="SPn-Hk-N16">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="forwardBtn:" destination="h2X-Ej-Wk1" id="Y3E-hM-BKe"/>
+                            </connections>
+                        </barButtonItem>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
+                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
                     <connections>
                         <outlet property="newsOutlet" destination="YLH-9W-LLF" id="AOK-wW-z0a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CFj-vI-Sa1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="1024"/>
+            <point key="canvasLocation" x="1070" y="1592"/>
         </scene>
         <!--Home-->
         <scene sceneID="oT5-vS-1fo">
@@ -243,6 +268,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="crZ-sW-dHv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -251,7 +277,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84I-is-309" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1893" y="38"/>
+            <point key="canvasLocation" x="1949" y="38"/>
         </scene>
         <!--Settings-->
         <scene sceneID="qeL-yr-12h">
@@ -310,7 +336,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZP-Sb-66j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4134.7826086956529" y="1023.913043478261"/>
+            <point key="canvasLocation" x="4329" y="817"/>
         </scene>
         <!--Info-->
         <scene sceneID="L04-2m-Z5O">
@@ -398,7 +424,33 @@ And.. drop us a line and request a song: music@247streaming.network</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPH-o0-KrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2361" y="1024"/>
+            <point key="canvasLocation" x="2735" y="817"/>
+        </scene>
+        <!--247 Streaming FaceBook-->
+        <scene sceneID="tGA-x1-WkC">
+            <objects>
+                <navigationController title="247 Streaming FaceBook" automaticallyAdjustsScrollViewInsets="NO" id="BOs-Jx-Xj0" customClass="MainNavigationController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="247 News" image="Google News-50" id="dRG-Ou-LbG"/>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="f2K-yi-pBg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="UIColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="h2X-Ej-Wk1" kind="relationship" relationship="rootViewController" id="gw5-7e-jC5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7m-G9-iwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="817"/>
         </scene>
     </scenes>
     <resources>
@@ -413,4 +465,5 @@ And.. drop us a line and request a song: music@247streaming.network</string>
         <image name="logo-247spice" width="800" height="800"/>
         <image name="music-7" width="30" height="30"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

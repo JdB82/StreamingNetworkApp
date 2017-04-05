@@ -74,8 +74,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     // tell the collection view how many cells to make.
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return radioStationData.count
-        
-        }
+    }
     
     // make a cell for each cell index path
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -118,7 +117,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     override func viewWillAppear(_ animated: Bool) {
         UIApplication.shared.statusBarStyle = .default
-        
     }
     
     // MARK: - GADBannerViewDelegate

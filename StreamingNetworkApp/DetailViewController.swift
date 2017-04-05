@@ -138,28 +138,32 @@ class DetailViewController: UIViewController {
     
     // Function to get the url of the currentSong out of FireBase so we can display it in the detailView.
     func showCurrentSong() {
+        
         // Let the current song display show below the image of radioStationUrlImage.
         if let currentSongPlayingUrl = theStationDataObject?.currentSong {
+            
             //Alamofire you use for unwrapping a url and it give back the response in this case a artist and titel.
             Alamofire.request(currentSongPlayingUrl).responseString(completionHandler: { (response) in
                 print(response.result.value as Any)
                 if response.result.isSuccess {
+                   
                     // Here you see a if condiction.
                     if let songName = response.result.value {
                         self.currentSongName = songName
+                        
                         // If you find a value than display the text in the outlet currentSongPlaying.
                         self.currentSongPlaying?.text = songName
                     }
                 } else {
                     // Create the alert controller
-                    let alert = UIAlertController(title: "Streaming error", message: "We are working on it", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(action:UIAlertAction!) in
+                    let alert = UIAlertController(title: "Streaming error", message: "please try again later while we try to fix this for you", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(action:UIAlertAction!) in
                         print("you have pressed the Cancel button")
                     }))
                     self.present(alert, animated: true, completion:nil)
-                }
+                  }
                 
-                self.setMetaData()
+                    self.setMetaData()
             })
         }
     }
@@ -188,8 +192,8 @@ class DetailViewController: UIViewController {
             } catch {
                 print(error)
             }
-        } catch {
-            print(error)
+                } catch {
+                    print(error)
         }
     }
     
@@ -224,15 +228,14 @@ class DetailViewController: UIViewController {
         }
     }
     
-
     // Sharing button on deatailView and functionality.
-    
     func shareCurrentStationPlaying(_ sender: UIBarButtonItem) {
             let title: String = (theStationDataObject?.stationName)!
             let textToShare = "Join me and listen to \(title)!"
         
-                if let myWebsite = NSURL(string: "http://www.247streaming.network") {
-
+                if let stringUrl = theStationDataObject?.sharingUrl,
+                    let myWebsite = NSURL(string: (stringUrl)) {
+                    
                     let objectsToShare = [textToShare, myWebsite] as [Any]
                     let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
                     

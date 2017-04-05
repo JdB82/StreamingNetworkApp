@@ -9,16 +9,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 
 import Foundation
- import Alamofire
+import Alamofire
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class RadioData {
-	public var stationName : String?
+	public var stationName  : String?
 	public var streamingUrl : String?
     public var stationImage : String?
-    public var currentSong : String?
+    public var currentSong  : String?
+    public var sharingUrl   : String?
     
-
 /**
     Returns an array of models based on given dictionary.
     
@@ -32,11 +32,11 @@ public class RadioData {
     public class func modelsFromDictionaryArray(array:NSArray) -> [RadioData]
     {
         var models:[RadioData] = []
-        for item in array
+            for item in array
         {
             models.append(RadioData(dictionary: item as! NSDictionary)!)
         }
-        return models
+            return models
     }
 
 /**
@@ -51,27 +51,29 @@ public class RadioData {
 */
 	required public init?(dictionary: NSDictionary) {
 
-		stationName = dictionary[jsonKeys.StationName] as? String
+		stationName  = dictionary[jsonKeys.StationName]  as? String
 		streamingUrl = dictionary[jsonKeys.streamingUrl] as? String
         stationImage = dictionary[jsonKeys.stationImage] as? String
-        currentSong = dictionary[jsonKeys.currentSong] as? String
+        currentSong  = dictionary[jsonKeys.currentSong]  as? String
+        sharingUrl   = dictionary[jsonKeys.sharingUrl]   as? String
         
 	}
 
-		
 /**
     Returns the dictionary representation for the current instance.
     
     - returns: NSDictionary.
 */
+    
 	public func dictionaryRepresentation() -> NSDictionary {
 
 		let dictionary = NSMutableDictionary()
 
-		dictionary.setValue(self.stationName, forKey: jsonKeys.StationName)
+		dictionary.setValue(self.stationName,  forKey: jsonKeys.StationName)
 		dictionary.setValue(self.streamingUrl, forKey: jsonKeys.streamingUrl)
         dictionary.setValue(self.stationImage, forKey: jsonKeys.stationImage)
-        dictionary.setValue(self.currentSong, forKey: jsonKeys.currentSong)
+        dictionary.setValue(self.currentSong,  forKey: jsonKeys.currentSong)
+        dictionary.setValue(self.sharingUrl,   forKey: jsonKeys.sharingUrl)
         
 		return dictionary
 	}
@@ -82,5 +84,4 @@ public class RadioData {
         })
         
     }
-
 }
