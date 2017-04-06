@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class StartViewController: UIViewController {
 
@@ -14,7 +15,7 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        SVProgressHUD.show()
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(StartViewController.notifyObservers),
                                                name:  NSNotification.Name(rawValue: notificationChannel),
@@ -47,16 +48,10 @@ class StartViewController: UIViewController {
                 tempImage.kf.setImage(with: url)
             }
         }
+        SVProgressHUD.dismiss()
 
         self.performSegue(withIdentifier: ToCollectionViewSeque, sender: self)
         
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-//        if segue.identifier == ToCollectionViewSeque {
-//            let goToCollectionView = segue.destination as! CollectionViewController
-//        }
     }
 
 }
