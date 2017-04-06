@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,9 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FIRApp.configure()
         
+        GADMobileAds.configure(withApplicationID: adMobID)
+        
         for name in UIFont.familyNames {
             print(name)
-            if let nameString = name as? String
+            if let nameString = name as String!
             {
                 print(UIFont.fontNames(forFamilyName: nameString))
             }
