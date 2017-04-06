@@ -116,7 +116,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     override func viewWillAppear(_ animated: Bool) {
         UIApplication.shared.statusBarStyle = .default
-        
     }
     
     // MARK: - GADBannerViewDelegate
@@ -152,9 +151,8 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         print(#function)
     }
     
+    
 }
-
-
 
 extension  CollectionViewController: UICollectionViewDelegateFlowLayout {
     
