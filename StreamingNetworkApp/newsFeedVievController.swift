@@ -7,19 +7,22 @@
 //
 
 import UIKit
+import SVProgressHUD
 
-class newsFeedVievController: UIViewController {
+class newsFeedVievController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var newsOutlet: UIWebView?
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let url = NSURL (string: "247streamingblog.wordpress.com");
-        let requestObj = NSURLRequest(url: url! as URL);
-        newsOutlet?.loadRequest(requestObj as URLRequest);
+        newsOutlet?.delegate = self
         
+        if let url = URL(string: "http://www.247streamingblog.wordpress.com") {
+            let requestObj = NSURLRequest(url: url)
+            newsOutlet?.loadRequest(requestObj as URLRequest)
         }
+        
+    }
     
     
     @IBAction func backBtn(_ sender: Any) {
@@ -38,5 +41,16 @@ class newsFeedVievController: UIViewController {
             } else {
                 self.navigationController?.popViewController(animated:true)
         }
+    }
+    
+    // Web view delegate functions
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        SVProgressHUD.show()
+
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        SVProgressHUD.dismiss()
+
     }
 }
