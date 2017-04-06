@@ -85,7 +85,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Kl-ew-zzj">
-                        <barButtonItem key="rightBarButtonItem" image="Image" style="plain" id="vKL-bP-PGA">
+                        <barButtonItem key="rightBarButtonItem" image="Info" style="plain" id="vKL-bP-PGA">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="4he-d6-8SL" kind="presentation" id="rMS-o0-m6U"/>
@@ -113,7 +113,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2017-04-06 at 16.29.13" translatesAutoresizingMaskIntoConstraints="NO" id="9Hm-SB-kcp">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2017-04-06 at 16.29.13" translatesAutoresizingMaskIntoConstraints="NO" id="9Hm-SB-kcp">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KaY-uA-3fg">
@@ -389,7 +389,7 @@ And.. drop us a line and request a song: music@247streaming.network</string>
     <resources>
         <image name="Document" width="20" height="26"/>
         <image name="Home" width="25" height="25"/>
-        <image name="Image" width="66" height="66"/>
+        <image name="Info" width="25" height="25"/>
         <image name="NewYork" width="750" height="1334"/>
         <image name="Play" width="128" height="128"/>
         <image name="Screen Shot 2017-04-06 at 16.29.13" width="872" height="1334"/>
