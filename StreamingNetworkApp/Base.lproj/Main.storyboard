@@ -251,13 +251,13 @@
             </objects>
             <point key="canvasLocation" x="1070" y="1592"/>
         </scene>
-        <!--Home-->
+        <!--247 Stations-->
         <scene sceneID="oT5-vS-1fo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TAk-eN-OtC" customClass="MainNavigationController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="Home1" id="p37-zY-KX4"/>
+                    <tabBarItem key="tabBarItem" title="247 Stations" image="Home" id="p37-zY-KX4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="crZ-sW-dHv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="crZ-sW-dHv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -363,11 +363,11 @@ And.. drop us a line and request a song: music@247streaming.network</string>
         <scene sceneID="tGA-x1-WkC">
             <objects>
                 <navigationController title="247 Streaming FaceBook" automaticallyAdjustsScrollViewInsets="NO" id="BOs-Jx-Xj0" customClass="MainNavigationController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="247 News" image="News1" id="dRG-Ou-LbG"/>
+                    <tabBarItem key="tabBarItem" title="247 News" image="Document" id="dRG-Ou-LbG"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f2K-yi-pBg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="f2K-yi-pBg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -387,10 +387,10 @@ And.. drop us a line and request a song: music@247streaming.network</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Home1" width="25" height="25"/>
+        <image name="Document" width="20" height="26"/>
+        <image name="Home" width="25" height="25"/>
         <image name="Image" width="66" height="66"/>
         <image name="NewYork" width="750" height="1334"/>
-        <image name="News1" width="25" height="25"/>
         <image name="Play" width="128" height="128"/>
         <image name="SpeakerWhitCone" width="392" height="604"/>
         <image name="close-button-800px" width="533" height="536"/>

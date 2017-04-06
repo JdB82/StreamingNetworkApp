@@ -12,6 +12,12 @@ class MyTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //This changes the colour of the icon colour.
+        UITabBar.appearance().tintColor = UIColor.white
+        
+        //This changes the tab bars colour.
+        self.tabBar.barTintColor = UIColor.black
 
         // Do any additional setup after loading the view.
     }
