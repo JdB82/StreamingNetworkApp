@@ -227,20 +227,21 @@ class DetailViewController: UIViewController {
     
     // Sharing button on deatailView and functionality.
     func shareCurrentStationPlaying(_ sender: UIBarButtonItem) {
-            let title: String = (theStationDataObject?.stationName)!
-            let shareCurrentSong = (theStationDataObject?.currentSong)
-            let textToShare = "Join me and listen to \(title)\(shareCurrentSong)!"
         
-                if let stringUrl = theStationDataObject?.sharingUrl,
-                    let myWebsite = NSURL(string: (stringUrl)) {
+        if let stringUrl = theStationDataObject?.sharingUrl,
+            let myWebsite = NSURL(string: (stringUrl)),
+            let title = (theStationDataObject?.stationName),
+            let shareCurrentSong = currentSongName {
+            
+                let textToShare = "Join me and listen to \(shareCurrentSong) on \(title)!"
+        
+                let objectsToShare = [textToShare, myWebsite] as [Any]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                
+                activityVC.popoverPresentationController?.sourceView = sender.customView
+                self.present(activityVC, animated: true, completion: nil)
                     
-                    let objectsToShare = [textToShare, myWebsite] as [Any]
-                    let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-                    
-                    activityVC.popoverPresentationController?.sourceView = sender.customView
-                    self.present(activityVC, animated: true, completion: nil)
-                        
-            }
+        }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

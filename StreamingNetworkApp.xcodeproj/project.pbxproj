@@ -24,6 +24,7 @@
 		604007A21E71ABB500B8035C /* StreamingNetworkAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604007991E71AAAE00B8035C /* StreamingNetworkAppTests.swift */; };
 		604007A41E71AF0D00B8035C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604007A31E71AF0D00B8035C /* DataProvider.swift */; };
 		604007AB1E71C06B00B8035C /* RadioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604007AA1E71C06B00B8035C /* RadioData.swift */; };
+		605B76A51E968224000DD3DB /* pexels-photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 605B76A41E968224000DD3DB /* pexels-photo.jpg */; };
 		606BF4121E89697C00C53679 /* newsFeedVievController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606BF4111E89697C00C53679 /* newsFeedVievController.swift */; };
 		60D835611E8D32F1004F1D84 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D835601E8D32F1004F1D84 /* SettingsViewController.swift */; };
 		60D835631E8D3340004F1D84 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D835621E8D3340004F1D84 /* DetailViewController.swift */; };
@@ -85,6 +86,7 @@
 		6040079C1E71AAAE00B8035C /* StreamingNetworkAppUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingNetworkAppUITests.swift; sourceTree = "<group>"; };
 		604007A31E71AF0D00B8035C /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = StreamingNetworkApp/DataProvider.swift; sourceTree = "<group>"; };
 		604007AA1E71C06B00B8035C /* RadioData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadioData.swift; path = StreamingNetworkApp/RadioData.swift; sourceTree = "<group>"; };
+		605B76A41E968224000DD3DB /* pexels-photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "pexels-photo.jpg"; path = "StreamingNetworkApp/Assets.xcassets/pexels-photo.imageset/pexels-photo.jpg"; sourceTree = "<group>"; };
 		606BF4111E89697C00C53679 /* newsFeedVievController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsFeedVievController.swift; sourceTree = "<group>"; };
 		60D835601E8D32F1004F1D84 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		60D835621E8D3340004F1D84 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		600370201E7164710095CE53 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				605B76A41E968224000DD3DB /* pexels-photo.jpg */,
 				600FE6B91E705D41005D208B /* Assets.xcassets */,
 				600FE6BE1E705D41005D208B /* Info.plist */,
 				BEB5B6AC1E968867003012D5 /* pexels-photo.jpg */,
@@ -463,6 +466,7 @@
 				601C1F951E8E567C0079A419 /* Start.storyboard in Resources */,
 				60D835691E8D3435004F1D84 /* MyCollectionViewCell.xib in Resources */,
 				600FE6B81E705D41005D208B /* Main.storyboard in Resources */,
+				605B76A51E968224000DD3DB /* pexels-photo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
