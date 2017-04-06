@@ -228,7 +228,8 @@ class DetailViewController: UIViewController {
     // Sharing button on deatailView and functionality.
     func shareCurrentStationPlaying(_ sender: UIBarButtonItem) {
             let title: String = (theStationDataObject?.stationName)!
-            let textToShare = "Join me and listen to \(title)!"
+            let shareCurrentSong = (theStationDataObject?.currentSong)
+            let textToShare = "Join me and listen to \(title)\(shareCurrentSong)!"
         
                 if let stringUrl = theStationDataObject?.sharingUrl,
                     let myWebsite = NSURL(string: (stringUrl)) {

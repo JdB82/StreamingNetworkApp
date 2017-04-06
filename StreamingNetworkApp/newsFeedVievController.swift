@@ -15,7 +15,7 @@ class newsFeedVievController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let url = NSURL (string: "https://www.facebook.com/247streaming");
+        let url = NSURL (string: "247streamingblog.wordpress.com");
         let requestObj = NSURLRequest(url: url! as URL);
         newsOutlet?.loadRequest(requestObj as URLRequest);
         

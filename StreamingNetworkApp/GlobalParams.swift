@@ -13,7 +13,7 @@ struct GlobalParams {
     
     // Main Settings
     struct main {
-        static var title = "247 Streaming"
+        static var title = "247streaming"
         
     }
     
