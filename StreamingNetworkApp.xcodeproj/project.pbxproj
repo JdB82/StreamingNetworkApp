@@ -406,8 +406,8 @@
 				TargetAttributes = {
 					600FE6AE1E705D41005D208B = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = CWK29L7ZPT;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 6CB7HT7995;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -803,13 +803,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = StreamingNetworkApp/StreamingNetworkApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = CWK29L7ZPT;
+				DEVELOPMENT_TEAM = 6CB7HT7995;
 				INFOPLIST_FILE = StreamingNetworkApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bensmithinc.247StreamingNetworkApp;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.deBie.247StreamingNetworkApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "29d53e12-fcbb-4282-b905-0dd044ce0a5c";
+				PROVISIONING_PROFILE_SPECIFIER = "247StreamingNetworkApp - Development";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -820,14 +820,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = StreamingNetworkApp/StreamingNetworkApp.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = CWK29L7ZPT;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 6CB7HT7995;
 				INFOPLIST_FILE = StreamingNetworkApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bensmithinc.247StreamingNetworkApp;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.deBie.247StreamingNetworkApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "99ce98ba-af85-4606-ab84-141bb70b6f96";
+				PROVISIONING_PROFILE_SPECIFIER = "247PushNotification - distribution";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
