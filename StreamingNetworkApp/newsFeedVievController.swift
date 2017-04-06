@@ -11,7 +11,7 @@ import UIKit
 class newsFeedVievController: UIViewController {
 
     @IBOutlet weak var newsOutlet: UIWebView?
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,5 +20,23 @@ class newsFeedVievController: UIViewController {
         newsOutlet?.loadRequest(requestObj as URLRequest);
         
         }
-
+    
+    
+    @IBAction func backBtn(_ sender: Any) {
+        
+        if(newsOutlet?.canGoBack)! {
+            newsOutlet?.goBack()
+            } else {
+                self.navigationController?.popViewController(animated:true)
+            }
+    }
+    
+    @IBAction func forwardBtn(_ sender: Any) {
+    
+        if(newsOutlet?.canGoForward)! {
+            newsOutlet?.goForward()
+            } else {
+                self.navigationController?.popViewController(animated:true)
+        }
+    }
 }
