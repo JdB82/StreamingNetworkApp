@@ -35,6 +35,7 @@
 		60E38A301E783FEB00A20807 /* Fort Foundry - Termina-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 60E38A271E7800CC00A20807 /* Fort Foundry - Termina-Black.otf */; };
 		60E38A331E78405C00A20807 /* Fort Foundry - Termina-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 60E38A261E7800BD00A20807 /* Fort Foundry - Termina-Regular.otf */; };
 		B920B207F0B53C89A4DEE37A /* Pods_StreamingNetworkAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C761EF9BC797F220ECE91F /* Pods_StreamingNetworkAppTests.framework */; };
+		BEB5B6AD1E968867003012D5 /* pexels-photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEB5B6AC1E968867003012D5 /* pexels-photo.jpg */; };
 		ED47A3521781D12A5EE7573D /* Pods_StreamingNetworkAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB34C77DB74464BA35896C5 /* Pods_StreamingNetworkAppUITests.framework */; };
 		F87F3C5430182AB1188EB6B3 /* Pods_StreamingNetworkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41944E92FFF745E02BE8F04D /* Pods_StreamingNetworkApp.framework */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,7 @@
 		7101C741468EB827F9C6F777 /* Pods-StreamingNetworkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkApp/Pods-StreamingNetworkApp.release.xcconfig"; sourceTree = "<group>"; };
 		AE22B7DD591C07F773AD9C91 /* Pods-StreamingNetworkAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkAppTests/Pods-StreamingNetworkAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AEB34C77DB74464BA35896C5 /* Pods_StreamingNetworkAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamingNetworkAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEB5B6AC1E968867003012D5 /* pexels-photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "pexels-photo.jpg"; path = "StreamingNetworkApp/Assets.xcassets/pexels-photo.imageset/pexels-photo.jpg"; sourceTree = "<group>"; };
 		BFDFD456B3DA4C41EE902D62 /* Pods-StreamingNetworkAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkAppUITests/Pods-StreamingNetworkAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FCB17092CC3533C01EEBA5CC /* Pods-StreamingNetworkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamingNetworkApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamingNetworkApp/Pods-StreamingNetworkApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +137,7 @@
 			children = (
 				600FE6B91E705D41005D208B /* Assets.xcassets */,
 				600FE6BE1E705D41005D208B /* Info.plist */,
+				BEB5B6AC1E968867003012D5 /* pexels-photo.jpg */,
 				601C1F961E8E5A080079A419 /* SplashScreen3.png */,
 				600370391E719BBA0095CE53 /* GoogleService-Info.plist */,
 			);
@@ -455,6 +458,7 @@
 				600FE6BD1E705D41005D208B /* LaunchScreen.storyboard in Resources */,
 				6003703A1E719BBA0095CE53 /* GoogleService-Info.plist in Resources */,
 				600FE6BA1E705D41005D208B /* Assets.xcassets in Resources */,
+				BEB5B6AD1E968867003012D5 /* pexels-photo.jpg in Resources */,
 				60E38A301E783FEB00A20807 /* Fort Foundry - Termina-Black.otf in Resources */,
 				601C1F951E8E567C0079A419 /* Start.storyboard in Resources */,
 				60D835691E8D3435004F1D84 /* MyCollectionViewCell.xib in Resources */,

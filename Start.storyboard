@@ -21,15 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SplashScreen3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Svi-5w-bAS">
-                                <rect key="frame" x="29" y="167" width="316" height="332"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pexels-photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Svi-5w-bAS">
+                                <rect key="frame" x="-66" y="0.0" width="507" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="z9A-e2-wzG" firstAttribute="top" secondItem="Svi-5w-bAS" secondAttribute="bottom" id="TSP-kd-Hhc"/>
+                            <constraint firstAttribute="trailing" secondItem="Svi-5w-bAS" secondAttribute="trailing" constant="-66" id="gak-hh-tS2"/>
+                            <constraint firstItem="Svi-5w-bAS" firstAttribute="leading" secondItem="4p1-Pk-UIu" secondAttribute="leading" constant="-66" id="l1M-nQ-KlD"/>
+                            <constraint firstItem="Svi-5w-bAS" firstAttribute="top" secondItem="4p1-Pk-UIu" secondAttribute="top" id="xUF-pv-UpB"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <segue destination="BTv-cE-a5J" kind="show" identifier="ToCollectionViewSeque" id="xlh-5r-Its"/>
+                        <segue destination="BTv-cE-a5J" kind="showDetail" identifier="ToCollectionViewSeque" animates="NO" action="showViewController:sender:" id="xlh-5r-Its"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvS-oz-FgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -46,6 +51,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SplashScreen3.png" width="1024" height="768"/>
+        <image name="pexels-photo.jpg" width="750" height="1334"/>
     </resources>
 </document>
