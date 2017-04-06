@@ -10,7 +10,7 @@ import UIKit
 
 class StartViewController: UIViewController {
 
-    var radioStationData: [RadioData] = []
+    var dataReturned: [RadioData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,19 +37,26 @@ class StartViewController: UIViewController {
     
     func notifyObservers(notification: NSNotification) {
         var radioDictionary: Dictionary<String,[RadioData]> = notification.userInfo as! Dictionary<String,[RadioData]>
-        radioStationData = radioDictionary[radioDictionaryKey]!
-        NotificationCenter.default.removeObserver(StartViewController.notifyObservers)
+        dataReturned = radioDictionary[radioDictionaryKey]!
+        radioStationData = dataReturned
+        
+        for (index, radioStation) in radioStationData.enumerated() {
+            var tempImage: UIImageView = UIImageView.init()
+            if let radioStationImage = radioStation.stationImage {
+                let url = URL(string: radioStationImage)
+                tempImage.kf.setImage(with: url)
+            }
+        }
 
         self.performSegue(withIdentifier: ToCollectionViewSeque, sender: self)
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == ToCollectionViewSeque {
-            
-            let goToCollectionView = segue.destination as! CollectionViewController
-                        goToCollectionView.radioStationData = radioStationData
-        }
+
+//        if segue.identifier == ToCollectionViewSeque {
+//            let goToCollectionView = segue.destination as! CollectionViewController
+//        }
     }
 
 }

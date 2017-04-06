@@ -26,10 +26,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <segue destination="BTv-cE-a5J" kind="presentation" identifier="ToCollectionViewSeque" id="xlh-5r-Its"/>
+                        <segue destination="BTv-cE-a5J" kind="show" identifier="ToCollectionViewSeque" id="xlh-5r-Its"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvS-oz-FgO" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -16,10 +16,9 @@
 		600FE6E11E705D7C005D208B /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600FE6E01E705D7C005D208B /* MyCollectionViewCell.swift */; };
 		601482731E8BC70F009624F2 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601482721E8BC70F009624F2 /* UIViewExtensions.swift */; };
 		6014D0DB1E92D72D0058A0CD /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6014D0DA1E92D72D0058A0CD /* MyTabBarController.swift */; };
-        		601C1F951E8E567C0079A419 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601C1F941E8E567C0079A419 /* Start.storyboard */; };
+		601C1F951E8E567C0079A419 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601C1F941E8E567C0079A419 /* Start.storyboard */; };
 		601C1F971E8E5A080079A419 /* SplashScreen3.png in Resources */ = {isa = PBXBuildFile; fileRef = 601C1F961E8E5A080079A419 /* SplashScreen3.png */; };
 		601C1F991E8E5AB70079A419 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601C1F981E8E5AB70079A419 /* StartViewController.swift */; };
-
 		602072FE1E76FF81001D5C33 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602072FD1E76FF81001D5C33 /* Constants.swift */; };
 		604007A11E71ABB200B8035C /* StreamingNetworkAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6040079C1E71AAAE00B8035C /* StreamingNetworkAppUITests.swift */; };
 		604007A21E71ABB500B8035C /* StreamingNetworkAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604007991E71AAAE00B8035C /* StreamingNetworkAppTests.swift */; };
@@ -75,10 +74,9 @@
 		601482721E8BC70F009624F2 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = StreamingNetworkApp/UIViewExtensions.swift; sourceTree = "<group>"; };
 		6014D0DA1E92D72D0058A0CD /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTabBarController.swift; path = ../MyTabBarController.swift; sourceTree = "<group>"; };
 		6019523D1E94E8EE00A6F440 /* StreamingNetworkApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StreamingNetworkApp.entitlements; sourceTree = "<group>"; };
-        		601C1F941E8E567C0079A419 /* Start.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		601C1F941E8E567C0079A419 /* Start.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		601C1F961E8E5A080079A419 /* SplashScreen3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen3.png; sourceTree = "<group>"; };
 		601C1F981E8E5AB70079A419 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-
 		602072FD1E76FF81001D5C33 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		604007981E71AAAE00B8035C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		604007991E71AAAE00B8035C /* StreamingNetworkAppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingNetworkAppTests.swift; sourceTree = "<group>"; };
@@ -402,8 +400,8 @@
 				TargetAttributes = {
 					600FE6AE1E705D41005D208B = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6CB7HT7995;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = CWK29L7ZPT;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -795,13 +793,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = StreamingNetworkApp/StreamingNetworkApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6CB7HT7995;
+				DEVELOPMENT_TEAM = CWK29L7ZPT;
 				INFOPLIST_FILE = StreamingNetworkApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.deBie.247StreamingNetworkApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bensmithinc.247StreamingNetworkApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "16961114-91db-4ea2-b9d9-519cc2a9b4ae";
-				PROVISIONING_PROFILE_SPECIFIER = "247StreamingNetworkApp - Development";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -812,14 +810,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = StreamingNetworkApp/StreamingNetworkApp.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 6CB7HT7995;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = CWK29L7ZPT;
 				INFOPLIST_FILE = StreamingNetworkApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.deBie.247StreamingNetworkApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bensmithinc.247StreamingNetworkApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "99ce98ba-af85-4606-ab84-141bb70b6f96";
-				PROVISIONING_PROFILE_SPECIFIER = "247PushNotification - distribution";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

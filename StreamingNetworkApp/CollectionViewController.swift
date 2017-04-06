@@ -12,11 +12,11 @@ import Kingfisher
 import FirebaseDatabase
 import GoogleMobileAds
 
+// make a var of the nam radioStationData where I store the array [RadioData]
+var radioStationData: [RadioData] = []
+
 // Implement the protocols I need.
 class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, GADBannerViewDelegate {
-    
-    // make a var of the nam radioStationData where I store the array [RadioData]
-    var radioStationData: [RadioData] = []
     
     // creating a property.
     var currentRadioStation: RadioData?
@@ -50,12 +50,12 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         // Register to receive notification data // Hieronder stemt Notification af op het keywoord "RadioDatanotify".
         
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(CollectionViewController.notifyObservers),
-                                               name:  NSNotification.Name(rawValue: notificationChannel),
-                                               object: nil)
-        
-        DataProvider.sharedInstance.getRadioData()
+//        NotificationCenter.default.addObserver(self,
+//                                               selector: #selector(CollectionViewController.notifyObservers),
+//                                               name:  NSNotification.Name(rawValue: notificationChannel),
+//                                               object: nil)
+//        
+//        DataProvider.sharedInstance.getRadioData()
         
         sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         
@@ -64,7 +64,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     func notifyObservers(notification: NSNotification) {
         var radioDictionary: Dictionary<String,[RadioData]> = notification.userInfo as! Dictionary<String,[RadioData]>
         radioStationData = radioDictionary[radioDictionaryKey]!
-        
         radioCollectionView.reloadData()
     }
     
