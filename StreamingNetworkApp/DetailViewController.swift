@@ -263,7 +263,7 @@ class DetailViewController: UIViewController {
         if UserDefaults.standard.bool(forKey: userDefaultKeys.wifiCheck) == false && currentReachabilityStatus != .reachableViaWiFi{
         
             // Create the alert controller
-            let Networkalert = UIAlertController(title: "Warning", message: "You are not on wifi, this app will use your mobile data. Is this ok? ", preferredStyle: UIAlertControllerStyle.alert)
+            let Networkalert = UIAlertController(title: "Warning", message: "You are not on wifi, this app will use your mobile data. Is this ok?", preferredStyle: UIAlertControllerStyle.alert)
                 Networkalert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: {(action:UIAlertAction!) in
                 self.playSong()
                 self.showCurrentSong()

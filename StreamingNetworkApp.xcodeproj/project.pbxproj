@@ -808,8 +808,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.deBie.247StreamingNetworkApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "29d53e12-fcbb-4282-b905-0dd044ce0a5c";
-				PROVISIONING_PROFILE_SPECIFIER = "247StreamingNetworkApp - Development";
+				PROVISIONING_PROFILE = "71db9757-ecb5-45f5-b8de-232aab90324a";
+				PROVISIONING_PROFILE_SPECIFIER = "247 Development Streaming Network";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
