@@ -17,7 +17,6 @@
 		601482731E8BC70F009624F2 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601482721E8BC70F009624F2 /* UIViewExtensions.swift */; };
 		6014D0DB1E92D72D0058A0CD /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6014D0DA1E92D72D0058A0CD /* MyTabBarController.swift */; };
 		601C1F951E8E567C0079A419 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601C1F941E8E567C0079A419 /* Start.storyboard */; };
-		601C1F971E8E5A080079A419 /* SplashScreen3.png in Resources */ = {isa = PBXBuildFile; fileRef = 601C1F961E8E5A080079A419 /* SplashScreen3.png */; };
 		601C1F991E8E5AB70079A419 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601C1F981E8E5AB70079A419 /* StartViewController.swift */; };
 		602072FE1E76FF81001D5C33 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602072FD1E76FF81001D5C33 /* Constants.swift */; };
 		604007A11E71ABB200B8035C /* StreamingNetworkAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6040079C1E71AAAE00B8035C /* StreamingNetworkAppUITests.swift */; };
@@ -77,7 +76,6 @@
 		6014D0DA1E92D72D0058A0CD /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTabBarController.swift; path = ../MyTabBarController.swift; sourceTree = "<group>"; };
 		6019523D1E94E8EE00A6F440 /* StreamingNetworkApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StreamingNetworkApp.entitlements; sourceTree = "<group>"; };
 		601C1F941E8E567C0079A419 /* Start.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
-		601C1F961E8E5A080079A419 /* SplashScreen3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen3.png; sourceTree = "<group>"; };
 		601C1F981E8E5AB70079A419 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		602072FD1E76FF81001D5C33 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		604007981E71AAAE00B8035C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 				600FE6B91E705D41005D208B /* Assets.xcassets */,
 				600FE6BE1E705D41005D208B /* Info.plist */,
 				BEB5B6AC1E968867003012D5 /* pexels-photo.jpg */,
-				601C1F961E8E5A080079A419 /* SplashScreen3.png */,
 				600370391E719BBA0095CE53 /* GoogleService-Info.plist */,
 			);
 			name = "Supporting Files";
@@ -456,7 +453,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				601C1F971E8E5A080079A419 /* SplashScreen3.png in Resources */,
 				60E38A331E78405C00A20807 /* Fort Foundry - Termina-Regular.otf in Resources */,
 				600FE6BD1E705D41005D208B /* LaunchScreen.storyboard in Resources */,
 				6003703A1E719BBA0095CE53 /* GoogleService-Info.plist in Resources */,
@@ -808,8 +804,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.deBie.247StreamingNetworkApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "71db9757-ecb5-45f5-b8de-232aab90324a";
-				PROVISIONING_PROFILE_SPECIFIER = "247 Development Streaming Network";
+				PROVISIONING_PROFILE = "29d53e12-fcbb-4282-b905-0dd044ce0a5c";
+				PROVISIONING_PROFILE_SPECIFIER = "247StreamingNetworkApp - Development";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
