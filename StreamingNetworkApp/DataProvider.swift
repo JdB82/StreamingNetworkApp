@@ -13,7 +13,7 @@ class DataProvider {
 
     public static let sharedInstance = DataProvider()  // Singleton: https://en.wikipedia.org/wiki/Singleton_pattern
 
-    var ref: FIRDatabaseReference!
+    var ref: DatabaseReference!
     
 // 12-3 try some stuff out here.
     
@@ -21,7 +21,7 @@ class DataProvider {
     private init() {}
     
     public func getRadioData() {
-        ref = FIRDatabase.database().reference() //Stores a link to firebase for your database.
+        ref = Database.database().reference() //Stores a link to firebase for your database.
 
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             if let dataDictionarys = snapshot.value as? NSDictionary,

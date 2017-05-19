@@ -141,7 +141,6 @@
 		45D871798A049944180F2E17CDD3D33B /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
 		48E3E95643228FDD7093905745AC90E2 /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		4A6BB0FB82C4522D5A33762316301B76 /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
-		4B4CE70AD2D391208964EC0E274BCC78 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
 		4C6C8B9B50CB8883B00E6DA7B4F3E34B /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
 		4C8FF1471A5E0B0B4668BBA2592779B0 /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		4D77B3072ED268B6CE4CC6A2962B3350 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
@@ -159,6 +158,7 @@
 		71AA270C18059BED1C89EF4E30F96F9D /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/AnimatedImageView.swift; sourceTree = "<group>"; };
 		7388DA997D6A99D11487F2376955392D /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		7483832892C4C4303C904FEB7DD7125F /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		74F321669F60ADB163DE71FC7BC49340 /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseNanoPB.framework; path = Frameworks/FirebaseNanoPB.framework; sourceTree = "<group>"; };
 		76076121D890645D3BD48EB3B85354AF /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
 		7740CCF56C905602E4A389B6654B9E7A /* Pods-StreamingNetworkAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StreamingNetworkAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7895A6C70AC84E6BA7775120AAA0DCAA /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
@@ -222,9 +222,11 @@
 		E219B10077F51C3873BACC57D39C4D03 /* Pods-StreamingNetworkAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StreamingNetworkAppTests-umbrella.h"; sourceTree = "<group>"; };
 		E37F73F28B5DE04BCCF7F7FC16B473D2 /* Pods-StreamingNetworkAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StreamingNetworkAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		E5ACEF965F61BEA744D4601D98BF7180 /* Pods-StreamingNetworkAppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StreamingNetworkAppUITests-dummy.m"; sourceTree = "<group>"; };
+		EA361799E72B460204D082AF68F72C7E /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Frameworks/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
 		EA8B1ABCD9A05E23559D5D95BBD4CF88 /* Pods-StreamingNetworkAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StreamingNetworkAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EAAAC87CF5D5C565869A1CEBC4E589B0 /* Pods-StreamingNetworkAppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StreamingNetworkAppTests-resources.sh"; sourceTree = "<group>"; };
 		ED3CE80A1A15CC84911036344085E6FB /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE0ED53311BACD3FD27A32D3A633A7C3 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
 		EE8E638B4541DC77F497E82EFB93B554 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		EFC0ECFFDB53495E7B0A199729735976 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Filter.swift; sourceTree = "<group>"; };
 		F0ED363EEDB6BE8DDBA1C6AAE0E06BA8 /* Pods-StreamingNetworkAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StreamingNetworkAppTests-frameworks.sh"; sourceTree = "<group>"; };
@@ -305,7 +307,7 @@
 				4CAB64B0664F581165E2437727893CC6 /* Alamofire */,
 				474AD1924A9BA473ADD0329950AE45C3 /* Firebase */,
 				C9B3119AF27C018D8E99B35454A41D97 /* FirebaseAnalytics */,
-				416F1B6A727ECE0C52123C2D70EA517F /* FirebaseCore */,
+				B1FC8D4F6CE426889642E6E9B265010D /* FirebaseCore */,
 				06C00CA68BE5389B94790CB5A1E7E307 /* FirebaseDatabase */,
 				BAB075DC7FB48FC42CCFFF9D4332EFDC /* FirebaseInstanceID */,
 				189D6818EA003088A3C25996C73997AE /* Google-Mobile-Ads-SDK */,
@@ -445,23 +447,6 @@
 			path = GoogleToolboxForMac;
 			sourceTree = "<group>";
 		};
-		4070D7D0DAC89DC66CD5F250D7EDD7E5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4B4CE70AD2D391208964EC0E274BCC78 /* FirebaseCore.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		416F1B6A727ECE0C52123C2D70EA517F /* FirebaseCore */ = {
-			isa = PBXGroup;
-			children = (
-				4070D7D0DAC89DC66CD5F250D7EDD7E5 /* Frameworks */,
-			);
-			name = FirebaseCore;
-			path = FirebaseCore;
-			sourceTree = "<group>";
-		};
 		42B57844B79481EE900B36BC94CDE98E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +524,16 @@
 			path = "Target Support Files/Pods-StreamingNetworkApp";
 			sourceTree = "<group>";
 		};
+		5631C50771A8F806B8C281B3B7523DCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE0ED53311BACD3FD27A32D3A633A7C3 /* FirebaseCore.framework */,
+				EA361799E72B460204D082AF68F72C7E /* FirebaseCoreDiagnostics.framework */,
+				74F321669F60ADB163DE71FC7BC49340 /* FirebaseNanoPB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		593925F429C7BBA2979DE2D363D5B9ED /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +592,15 @@
 				9299ABF4F0942D423236F77ECFA41E83 /* SVProgressHUD.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B1FC8D4F6CE426889642E6E9B265010D /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				5631C50771A8F806B8C281B3B7523DCB /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
 			sourceTree = "<group>";
 		};
 		BAB075DC7FB48FC42CCFFF9D4332EFDC /* FirebaseInstanceID */ = {
