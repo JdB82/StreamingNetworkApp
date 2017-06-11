@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lC5-Ac-YG5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lC5-Ac-YG5">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -168,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDl-4h-7oH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2851" y="817"/>
+            <point key="canvasLocation" x="2878" y="817"/>
         </scene>
         <!--My Tab Bar Controller-->
         <scene sceneID="mje-MF-fgx">
@@ -257,7 +257,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TAk-eN-OtC" customClass="MainNavigationController" customModule="StreamingNetworkApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="247 Stations" image="Home" id="p37-zY-KX4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="crZ-sW-dHv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="crZ-sW-dHv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -296,20 +296,30 @@
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="4z6-AU-RTg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aa9-W6-tQc">
-                                        <rect key="frame" x="8" y="168" width="398" height="400"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" pagingEnabled="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aa9-W6-tQc">
+                                        <rect key="frame" x="8" y="92" width="398" height="574"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="400" id="eLv-6E-4Yq"/>
+                                            <constraint firstAttribute="height" constant="574" id="eLv-6E-4Yq"/>
                                         </constraints>
                                         <string key="text">WELCOME TO THE                                              247STREAMING.NETWORK
 
 WHO WE ARE
 
-247streaming is a team of top notch media professionals and we're developing a way to give you more of your favorite content. Be it music, news, sports, sleaze... anything.. You are the entertainment boss on your favorite station! Stay tuned for exciting updates to the 247streaming app.
+247streaming is a team of extremely nutty music professors bringing you the best music on the the planet with our ultra secret formula. 
 
-</string>
-                                        <fontDescription key="fontDescription" name="Termina-Regular" family="Termina" pointSize="17"/>
+Your favorite Top 40, R&amp;B, Dancehall &amp; Reggeaton on 247Spice. 
+Straight out of the 247 garage: Alternative Pop from the 80s 90s &amp; Now on 247Blitz. 
+Live from the secret dancefloor: 247Ultra -Pure Uncut EDM. 
+247Jamz with the wickedest Old Skool &amp; Today's R&amp;B.
+
+Click on the News button while you listen and stay up do date on the latest sleaze, music videos and artist news.
+
+Our labs are developing a way to give you more and more of your favorite stuff. Be it music, news, sleaze... anything.. You will be the evil entertainment boss on your favorite channels. Stay tuned for exciting updates to the 247streaming app.
+
+Disclaimer: 
+The products of 247streaming are not tested on animals, instead we test them on YOU!</string>
+                                        <fontDescription key="fontDescription" name="Termina-Regular" family="Termina" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -333,7 +343,7 @@ WHO WE ARE
                                 <constraints>
                                     <constraint firstItem="aa9-W6-tQc" firstAttribute="leading" secondItem="4z6-AU-RTg" secondAttribute="leadingMargin" id="15m-oF-TCm"/>
                                     <constraint firstAttribute="trailing" secondItem="dwU-3T-rAH" secondAttribute="trailing" constant="13" id="7ks-Af-9Vt"/>
-                                    <constraint firstItem="aa9-W6-tQc" firstAttribute="centerY" secondItem="4z6-AU-RTg" secondAttribute="centerY" id="OmA-tD-33g"/>
+                                    <constraint firstItem="aa9-W6-tQc" firstAttribute="centerY" secondItem="4z6-AU-RTg" secondAttribute="centerY" constant="11" id="OmA-tD-33g"/>
                                     <constraint firstItem="aa9-W6-tQc" firstAttribute="centerX" secondItem="4z6-AU-RTg" secondAttribute="centerX" id="XAV-aL-jWn"/>
                                     <constraint firstItem="dwU-3T-rAH" firstAttribute="top" secondItem="4z6-AU-RTg" secondAttribute="top" constant="24" id="dQD-O3-4tu"/>
                                 </constraints>
@@ -357,7 +367,7 @@ WHO WE ARE
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPH-o0-KrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="817"/>
+            <point key="canvasLocation" x="1947.826086956522" y="816.84782608695662"/>
         </scene>
         <!--247 Streaming FaceBook-->
         <scene sceneID="tGA-x1-WkC">
@@ -367,7 +377,7 @@ WHO WE ARE
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="f2K-yi-pBg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f2K-yi-pBg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
